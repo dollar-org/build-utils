@@ -7,7 +7,10 @@ git checkout master
 git pull
 git merge staging -m "Auto merge"
 git push
-git commit -a -m "Promotion from staging" || :
+echo ${RELEASE} > .release
+envsubst < README.md > README.expanded
+mv README.expanded README.md
+git commit -a -m "Promotion from staging of ${RELEASE}" || :
 git tag ${RELEASE} || :
 git push --tags
 git push origin master
