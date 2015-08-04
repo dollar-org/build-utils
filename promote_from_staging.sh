@@ -1,4 +1,14 @@
 #!/bin/sh -eux
+
+if [ -n "$GIT_EMAIL"]
+then
+  email=$GIT_EMAIL
+  name=$GIT_NAME
+else
+  email=$DOCKER_EMAIL
+  name=$DOCKER_USER
+fi
+
 git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
 git reset HEAD --hard
