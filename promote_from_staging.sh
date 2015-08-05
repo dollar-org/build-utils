@@ -22,6 +22,7 @@ echo ${RELEASE} > .release
 envsubst < README.md > README.expanded
 mv README.expanded README.md
 git commit -a -m "Promotion from staging of ${RELEASE}" || :
+git push
 git tag ${RELEASE} || :
 git push --tags
 git push origin master
