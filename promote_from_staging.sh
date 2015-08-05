@@ -15,12 +15,12 @@ git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
 git reset HEAD --hard
 git clean -fd
+envsubst < README.md > /tmp/README.expanded
 git checkout master
 git pull 
 git merge staging -m "Auto merge"
 echo ${RELEASE} > .release
-envsubst < README.md > README.expanded
-mv README.expanded README.md
+mv /tmp/README.expanded README.md
 git commit -a -m "Promotion from staging of ${RELEASE}" || :
 git push
 git tag ${RELEASE} || :
