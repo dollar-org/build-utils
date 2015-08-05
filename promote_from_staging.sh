@@ -18,7 +18,6 @@ git clean -fd
 git checkout master
 git pull
 git merge staging -m "Auto merge"
-git push
 echo ${RELEASE} > .release
 envsubst < README.md > README.expanded
 mv README.expanded README.md
