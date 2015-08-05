@@ -16,7 +16,7 @@ git config --global user.name "${GIT_NAME}"
 git reset HEAD --hard
 git clean -fd
 git checkout master
-git pull
+git pull  -m "Auto merge"
 git merge staging -m "Auto merge"
 echo ${RELEASE} > .release
 envsubst < README.md > README.expanded
