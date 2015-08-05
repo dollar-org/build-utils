@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 
-if [ -n "$GIT_EMAIL"]
+if [ -n "$GIT_EMAIL" ]
 then
   email=$GIT_EMAIL
   name=$GIT_NAME
