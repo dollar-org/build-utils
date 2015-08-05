@@ -1,4 +1,4 @@
-#!/bin/sh -eux
+#!/bin/sh -ex
 
 if [ -n "$GIT_EMAIL"]
 then
@@ -8,6 +8,8 @@ else
   email=$DOCKER_EMAIL
   name=$DOCKER_USER
 fi
+
+set -u
 
 git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
