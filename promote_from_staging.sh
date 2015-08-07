@@ -15,7 +15,7 @@ git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
 git reset HEAD --hard
 git clean -fd
-envsubst < README.md > /tmp/README.expanded
+envsubst '${RELEASE}' < README.md > /tmp/README.expanded
 git checkout master
 git pull 
 git merge staging -m "Auto merge"
