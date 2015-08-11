@@ -23,7 +23,7 @@ echo "[![$3](https://img.shields.io/badge/Status-$1-$2.svg?style=flat)](http://g
 export STATE_SHELVED=$(badge Shelved gray "Shelved")
 export STATE_EXPERIMENTAL=$(badge Experimental_or_POC red "Experimental")
 export STATE_ACTIVE=$(badge Active_Initial_Development orange "Active Development")
-export STATE_UNTESTED=$(badge Pre_Alpha yellow "Pre Alpha")
+export STATE_PRE_ALPHA=$(badge Pre_Alpha yellow "Pre Alpha")
 export STATE_ALPHA=$(badge Alpha yellowgreen "Alpha")
 export STATE_BETA=$(badge Beta green "Beta")
 export STATE_PROD=$(badge Production_Ready blue "Production Ready")
@@ -49,7 +49,9 @@ export FOOTER=$(
 cat <<EOF
 --------
 
-(c) 2015 Sillelien all rights reserved. Please see [![GitHub License](https://img.shields.io/github/license/sillelien/configurator.svg)](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE) for license details of this project. Please visit http://sillelien.com for help and commercial support or raise issues here ![GitHub Issues](https://img.shields.io/github/issues/sillelien/configurator.svg)](https://github.com/sillelien/configurator/issues).
+[![GitHub License](https://img.shields.io/github/license/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.svg)](https://raw.githubusercontent.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/master/LICENSE)
+
+(c) 2015 Sillelien all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/master/LICENSE) for license details of this project. Please visit http://sillelien.com for help and commercial support or raise issues on [GitHub](https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/issues).
 EOF
 )
 
@@ -57,7 +59,7 @@ export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 
-envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_UNTESTED}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${TUTUM}' < README.md > /tmp/README.expanded
+envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${TUTUM}' < README.md > /tmp/README.expanded
 git checkout master
 git pull 
 git merge staging -m "Auto merge"
