@@ -20,9 +20,10 @@ function badge() {
 echo "[![$3](https://img.shields.io/badge/Status-$1-$2.svg?style=flat)](http://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME)"
 }
 
-export STATE_EXPERIMENTAL=$(badge Experimental red "Experimental")
-export STATE_ACTIVE=$(badge Active_Development orange "Active Development")
-export STATE_UNTESTED=$(badge Some_Testing yellow "Some Testing")
+export STATE_SHELVED=$(badge Shelved gray "Shelved")
+export STATE_EXPERIMENTAL=$(badge Experimental_or_POC red "Experimental")
+export STATE_ACTIVE=$(badge Active_Initial_Development orange "Active Development")
+export STATE_UNTESTED=$(badge Pre_Alpha yellow "Pre Alpha")
 export STATE_ALPHA=$(badge Alpha yellowgreen "Alpha")
 export STATE_BETA=$(badge Beta green "Beta")
 export STATE_PROD=$(badge Production_Ready blue "Production Ready")
