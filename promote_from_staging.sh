@@ -18,7 +18,7 @@ git clean -fd
 
 export BLURB="**If you use this project please consider giving us a star on [GitHub](http://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME) . Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**"
 
-export FOOTER="(c) 2015 Sillelien all rights reserved. Please see LICENSE for license details of this project. Please contact neilellis@sillelien.com for help and support."
+export FOOTER="(c) 2015 Sillelien all rights reserved. Please see LICENSE for license details of this project. Please visit http://sillelien.com for help and commercial support."
 
 export HEADER=""
 
