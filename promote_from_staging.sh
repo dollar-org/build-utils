@@ -16,6 +16,18 @@ git config --global user.name "${GIT_NAME}"
 git reset HEAD --hard
 git clean -fd
 
+function badge() {
+echo "[![$3](https://img.shields.io/badge/Status-$1-$2.svg?style=flat)](http://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME)"
+
+}
+
+export STATE_EXPERIMENTAL=$(badge Experimental red "Experimental")
+export STATE_ACTIVE=$(badge Active_Development orange "Active Development")
+export STATE_UNTESTED=$(badge Some_Testing yellow "Some Testing")
+export STATE_ALPHA=$(badge Alpha yellowgreen "Alpha")
+export STATE_BETA=$(badge Beta green "Beta")
+export STATE_PROD=$(badge Production_Ready blue "Production Ready")
+
 export BLURB="**If you use this project please consider giving us a star on [GitHub](http://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME) . Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**"
 
 export FOOTER="(c) 2015 Sillelien all rights reserved. Please see LICENSE for license details of this project. Please visit http://sillelien.com for help and commercial support."
