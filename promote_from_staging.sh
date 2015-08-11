@@ -38,7 +38,12 @@ Please contact us through chat (below) or through [![GitHub Issues](https://img.
 EOF
 )
 
-export FOOTER="(c) 2015 Sillelien all rights reserved. Please see LICENSE for license details of this project. Please visit http://sillelien.com for help and commercial support."
+export FOOTER=$(
+cat <<EOF
+
+(c) 2015 Sillelien all rights reserved. Please see [![GitHub License](https://img.shields.io/github/license/sillelien/configurator.svg)](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE) for license details of this project. Please visit http://sillelien.com for help and commercial support or raise issues here ![GitHub Issues](https://img.shields.io/github/issues/sillelien/configurator.svg)](https://github.com/sillelien/configurator/issues).
+EOF
+)
 
 export HEADER=""
 
