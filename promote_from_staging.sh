@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/bash -ex
 
 if [ -n "$GIT_EMAIL" ]
 then
@@ -18,7 +18,6 @@ git clean -fd
 
 function badge() {
 echo "[![$3](https://img.shields.io/badge/Status-$1-$2.svg?style=flat)](http://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME)"
-
 }
 
 export STATE_EXPERIMENTAL=$(badge Experimental red "Experimental")
