@@ -28,7 +28,15 @@ export STATE_ALPHA=$(badge Alpha yellowgreen "Alpha")
 export STATE_BETA=$(badge Beta green "Beta")
 export STATE_PROD=$(badge Production_Ready blue "Production Ready")
 
-export BLURB="**If you use this project please consider giving us a star on [GitHub](http://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME) . Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**"
+export BLURB=$(
+cat <<EOF
+**If you use this project please consider giving us a star on [GitHub](http://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME). Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**
+
+Please contact us through chat (below) or through [![GitHub Issues](https://img.shields.io/github/issues/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.svg)](https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/issues).
+
+[![Join the chat at https://gitter.im/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+EOF
+)
 
 export FOOTER="(c) 2015 Sillelien all rights reserved. Please see LICENSE for license details of this project. Please visit http://sillelien.com for help and commercial support."
 
