@@ -34,7 +34,7 @@ export FOOTER="(c) 2015 Sillelien all rights reserved. Please see LICENSE for li
 
 export HEADER=""
 
-envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}' < README.md > /tmp/README.expanded
+envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_UNTESTED}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}' < README.md > /tmp/README.expanded
 git checkout master
 git pull 
 git merge staging -m "Auto merge"
