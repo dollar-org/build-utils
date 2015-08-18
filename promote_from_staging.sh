@@ -1,5 +1,9 @@
 #!/bin/bash -ex
 
+cd $(dirname $0)
+DIR=$(pwd)
+cd -
+
 if [ -n "$GIT_EMAIL" ]
 then
   email=$GIT_EMAIL
@@ -58,13 +62,15 @@ EOF
 export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
+export CODENAME=$($DIR/codenames $CIRCLE_SHA1)
 
 git checkout master
 git pull 
 git merge staging -m "Auto merge"
 echo ${RELEASE} > .release
+echo ${RELEASE} ${CODENAME} ${CIRCLE_SHA1} > .release.details
 envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${TUTUM}' < README.tmpl.md > README.md
-git add README.md
+git add README.md .release .release.details
 git commit -a -m "Promotion from staging of ${RELEASE}" || :
 git push
 git tag ${RELEASE} || :
