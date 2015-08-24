@@ -6,7 +6,7 @@ DIR=$(pwd)
 cd -
 
 export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
-export RELEASE=${MAJOR_RELEASE}-${CODENAME}
+export RELEASE=${RELEASE:-${CODENAME}}
 
 if [ -n "$GIT_EMAIL" ]
 then
