@@ -1,8 +1,12 @@
 #!/bin/bash -ex
 
+
 cd $(dirname $0)
 DIR=$(pwd)
 cd -
+
+export RELEASE=${MAJOR_RELEASE}-${CODENAME}
+export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
 
 if [ -n "$GIT_EMAIL" ]
 then
@@ -79,7 +83,7 @@ EOF
 export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
-export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
+
 
 git checkout master
 git pull 
