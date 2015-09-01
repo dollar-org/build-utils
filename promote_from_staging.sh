@@ -6,7 +6,12 @@ DIR=$(pwd)
 cd -
 
 export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
-export RELEASE=${RELEASE:-${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}}
+if [[ ${CIRCLE_BRANCH} == "staging" ]]
+then
+    export RELEASE=${RELEASE:-latest}
+else
+    export RELEASE=${RELEASE:-${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}}
+fi
 
 if [ -n "$GIT_EMAIL" ]
 then
