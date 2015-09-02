@@ -96,6 +96,10 @@ git merge ${CIRCLE_BRANCH} -m "Auto merge"
 echo ${RELEASE} > .release
 echo ${RELEASE} ${CODENAME} ${CIRCLE_SHA1} > .release.details
 envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${TUTUM}' < README.tmpl.md > README.md
+if [ -f tutum.tmpl.yml ]
+then
+    envsubst '${RELEASE}' < tutum.tmpl.yml > tutum.yml
+fi
 git add README.md .release .release.details
 git commit -a -m "Promotion of ${RELEASE}" || :
 git push
