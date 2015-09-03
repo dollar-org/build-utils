@@ -93,7 +93,7 @@ export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https
 
 
 git checkout master
-git pull -m "Auto merge"
+git fetch
 git merge ${CIRCLE_BRANCH} -m "Auto merge"
 echo ${RELEASE} > .release
 echo ${RELEASE} ${TAG} ${CODENAME} ${CIRCLE_SHA1} > .release.details
