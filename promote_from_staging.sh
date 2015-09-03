@@ -9,8 +9,10 @@ export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
 if [[ ${CIRCLE_BRANCH} == "staging" ]]
 then
     export RELEASE=${RELEASE:-snapshot-${CIRCLE_BUILD_NUM}}
+    export TAG=${RELEASE:-snapshot-${CIRCLE_BUILD_NUM}}
 else
     export RELEASE=${RELEASE:-${CIRCLE_BRANCH}}
+    export TAG=${RELEASE}-${CIRCLE_BUILD_NUM}
 fi
 
 if [ -n "$GIT_EMAIL" ]
@@ -91,10 +93,10 @@ export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https
 
 
 git checkout master
-git pull 
+git pull
 git merge ${CIRCLE_BRANCH} -m "Auto merge"
 echo ${RELEASE} > .release
-echo ${RELEASE} ${CODENAME} ${CIRCLE_SHA1} > .release.details
+echo ${RELEASE} ${TAG} ${CODENAME} ${CIRCLE_SHA1} > .release.details
 envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${TUTUM}' < README.tmpl.md > README.md
 if [ -f tutum.tmpl.yml ]
 then
@@ -103,6 +105,6 @@ fi
 git add README.md .release .release.details
 git commit -a -m "Promotion of ${RELEASE}" || :
 git push
-git tag ${RELEASE} || :
+git tag ${TAG} || :
 git push --tags
 git push origin master
