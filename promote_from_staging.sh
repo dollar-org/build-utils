@@ -91,7 +91,7 @@ export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 
-git pull origin
+git pull origin ${CIRCLE_BRANCH}
 echo ${RELEASE} > .release
 echo ${RELEASE} ${TAG} ${CODENAME} ${CIRCLE_SHA1} > .release.details
 envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${TUTUM}' < README.tmpl.md > README.md
