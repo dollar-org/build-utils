@@ -91,9 +91,9 @@ export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 
-
+git fetch
 git checkout master
-git pull
+git fetch
 git merge ${CIRCLE_BRANCH} -m "Auto merge"
 echo ${RELEASE} > .release
 echo ${RELEASE} ${TAG} ${CODENAME} ${CIRCLE_SHA1} > .release.details
