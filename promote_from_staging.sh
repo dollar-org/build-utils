@@ -101,12 +101,12 @@ then
 fi
 git add README.md .release .release.details tutum.yml
 git commit -a -m "Templates for ${RELEASE}" || :
-git push
+git push origin ${CIRCLE_BRANCH}
 git checkout master
 git pull origin
 git merge ${CIRCLE_BRANCH} -m "Auto merge"
 git commit -a -m "Promotion of ${RELEASE}" || :
-git push
+git push origin master
 git tag ${TAG} || :
-git push --tags
+git push --tags origin master
 git push origin master
