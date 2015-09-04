@@ -105,6 +105,7 @@ fi
 git add README.md .release .release.details
 git commit -a -m "Promotion of ${RELEASE}" || :
 git fetch
+git merge ${CIRCLE_BRANCH} -m "Auto merge"
 git push
 git tag ${TAG} || :
 git push --tags
