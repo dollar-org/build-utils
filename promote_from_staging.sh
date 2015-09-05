@@ -91,7 +91,10 @@ export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 
-git pull origin ${CIRCLE_BRANCH}
+
+git checkout master
+git pull
+git merge ${CIRCLE_BRANCH} -m "Auto merge"
 echo ${RELEASE} > .release
 echo ${RELEASE} ${TAG} ${CODENAME} ${CIRCLE_SHA1} > .release.details
 envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${TUTUM}' < README.tmpl.md > README.md
@@ -99,14 +102,10 @@ if [ -f tutum.tmpl.yml ]
 then
     envsubst '${RELEASE}' < tutum.tmpl.yml > tutum.yml
 fi
-git add README.md .release .release.details tutum.yml
-git commit -a -m "Templates for ${RELEASE}" || :
-git push origin ${CIRCLE_BRANCH}
-git checkout master
-git pull origin master
-git merge ${CIRCLE_BRANCH} -m "Auto merge"
+git add README.md .release .release.details
 git commit -a -m "Promotion of ${RELEASE}" || :
-git push origin master
+git fetch
+git push
 git tag ${TAG} || :
-git push --tags origin master
+git push --tags
 git push origin master
