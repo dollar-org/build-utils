@@ -109,6 +109,7 @@ then
 fi
 
 
+
 function routes3() {
     aws s3 cp --cache-control "no-cache" --recursive s3://$1/${3}/ s3://$1/previous/
     echo ${4} > /tmp/version
