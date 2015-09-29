@@ -11,8 +11,8 @@ $vizzbuzz_medium_blue : $vb_light_blue_3;
 $vizzbuzz_blue : darken($vizzbuzz_light_blue,10%);
 $vizzbuzz_dark_blue : darken($vizzbuzz_blue,15%);
 $vizzbuzz_darker_blue : darken($vizzbuzz_blue,20%);
-$vizzbuzz_light_purple : lighten($vizzbuzz_purple,10%);
 $vizzbuzz_purple : $vb_purple_3;
+$vizzbuzz_light_purple : lighten($vizzbuzz_purple,10%);
 $vizzbuzz_dark_purple : $vb_purple_4;
 $vizzbuzz_nearly_black : rgba(44, 48, 55,1);
 $vizzbuzz_black :rgba(30,34,40,1);
@@ -44,14 +44,6 @@ $vizzbuzz_dark_grey : lighten($vizzbuzz_black,15%);
 $vizzbuzz_darker_grey : lighten($vizzbuzz_black,10%);
 
 
-.vb-green {
-  color:$vizzbuzz_green !important;
-}
-
-.vb-black {
-  color:$vizzbuzz_black !important;
-}
-
 $vizzbuzz_font_friendly: Arial, "Helvetica Neue", Helvetica,  "Lucida Grande", sans-serif;
 $vizzbuzz_font_logo: "Wendy One", "Helvetica Neue", Helvetica,  "Lucida Grande", sans-serif;
 $vizzbuzz_font_sans_serif:  "Arimo", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -62,3 +54,10 @@ $vizzbuzz_font_serif:       Georgia, "Times New Roman", Times, serif;
 $vizzbuzz_font_monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $vizzbuzz_font_family_base:        $vizzbuzz_font_sans_serif;
 
+.vb-green {
+  color:$vizzbuzz_green !important;
+}
+
+.vb-black {
+  color:$vizzbuzz_black !important;
+}
