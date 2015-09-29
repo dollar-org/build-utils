@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-export builddir=$(pwd)
 export release=${CIRCLE_BUILD_NUM:-snapshot}
 export AWS_DEFAULT_REGION=eu-west-1
 
@@ -143,7 +142,7 @@ function routes3() {
                     "HostName": "$1",
                 "HttpRedirectCode": "302",
                 "Protocol": "https",
-                "ReplaceKeyPrefixWith": "$5/"
+                "ReplaceKeyPrefixWith": "$live/"
             }
         }
     ]
