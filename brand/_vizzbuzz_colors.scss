@@ -1,63 +1,76 @@
-@import "vizzbuzz_brand";
-
-$vizzbuzz_turquoise :  $vb_turquoise_3;
-$vizzbuzz_dark_turqoise : $vb_turquoise_4;
-$vizzbuzz_light_green : $vb_green_2;
-$vizzbuzz_green : $vb_green_4;
-$vizzbuzz_dark_green : darken($vb_green_4,10%);
-$vizzbuzz_light_blue : $vb_light_blue_2;
-$vizzbuzz_light_blue_transparent: $vb_light_blue_2_alpha_50;
-$vizzbuzz_medium_blue : $vb_light_blue_3;
-$vizzbuzz_blue : darken($vizzbuzz_light_blue,10%);
-$vizzbuzz_dark_blue : darken($vizzbuzz_blue,15%);
-$vizzbuzz_darker_blue : darken($vizzbuzz_blue,20%);
-$vizzbuzz_purple : $vb_purple_3;
-$vizzbuzz_light_purple : lighten($vizzbuzz_purple,10%);
-$vizzbuzz_dark_purple : $vb_purple_4;
-$vizzbuzz_nearly_black : rgba(44, 48, 55,1);
-$vizzbuzz_black :rgba(30,34,40,1);
-$vizzbuzz_black_slightly_transparent : rgba(30,30,30,0.9);
-$vizzbuzz_really_black : darken($vizzbuzz_black,10%);
-$vizzbuzz_dark_black : darken($vizzbuzz_black,20%);
-$vizzbuzz_yellow : $vb_yellow_0;
-$vizzbuzz_light_yellow : lighten($vb_yellow_0,20%);
-$vizzbuzz_light_orange : lighten($vb_orange_0,10%);
-$vizzbuzz_orange : $vb_orange_0;
-$vizzbuzz_brown : $vb_orange_4;
-$vizzbuzz_pink : lighten($vb_pink_3,20%);
-$vizzbuzz_red : $vb_red_0;
-$vizzbuzz_white :rgb(250, 250, 250);
-$vizzbuzz_dirty_white : rgb(245, 245, 245);
-$vizzbuzz_blue_white : rgb(249, 251, 252);
-$vizzbuzz_white_very_slightly_transparent : rgba(250, 250, 250,0.9);
-$vizzbuzz_white_slightly_transparent : rgba(250, 250, 250,0.8);
-$vizzbuzz_white_very_transparent : rgba(250, 250, 250,0.7);
-$vizzbuzz_white_extremely_transparent : rgba(250, 250, 250,0.6);
-$vizzbuzz_white_almost_completely_transparent : rgba(250, 250, 250,0.3);
-$vizzbuzz_white_completely_transparent : rgba(250, 250, 250,0.2);
-$vizzbuzz_pure_white: lighten($vizzbuzz_white,10%);
-$vizzbuzz_light_grey : lighten($vizzbuzz_black,30%);
-$vizzbuzz_lighter_grey : lighten($vizzbuzz_light_grey,20%);
-$vizzbuzz_very_light_grey : lighten($vizzbuzz_light_grey,30%);
-$vizzbuzz_grey : lighten($vizzbuzz_black,25%);
-$vizzbuzz_dark_grey : lighten($vizzbuzz_black,15%);
-$vizzbuzz_darker_grey : lighten($vizzbuzz_black,10%);
+//Vizzbuzz Color Palette
 
 
-$vizzbuzz_font_friendly: Arial, "Helvetica Neue", Helvetica,  "Lucida Grande", sans-serif;
-$vizzbuzz_font_logo: "Wendy One", "Helvetica Neue", Helvetica,  "Lucida Grande", sans-serif;
-$vizzbuzz_font_sans_serif:  "Arimo", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$vizzbuzz_font_serif:       Georgia, "Times New Roman", Times, serif;
+// http://paletton.com/palette.php?uid=53u0u0k%2B%2BWvr-ZUDS%2BV%2BVyAZZpW
+//<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAABLCAYAAABeMdGUAAAFW0lEQVR4Xu3ZMcqcVQBG4e/fiztwAWnFXdhKwFobCzcQsA0oNhKwtXATks4tWEggEKPYjFt4b/H9nOKZDdw75wwc7jtPjzefPi6fDoFPOldxk+v6/JtfYAgRePfZf6HbuMqTgMR+BAKSEiIgKR2XgLR8CEjLx3UJSMqIgKR0CEhLxyUgMSEC0hIiIC0fXiAtHwLS8uEFEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLyISAtHwIS8yEgLSEC0vIhIC0fAhLzISAtIQLS8iEgLR8CEvMhIC0hAtLy8fR4PB63X+mPH28/4u1PX9x+xotXtx9xvf/nfh3Xn8/g49dn8PHVM/j4cL+PNz9/vP2LvHz5+vYz/nr39e1nPB5/337GD79/uP2ML7/9/vYz/v3tu9vPEJADxAKyw3orIDMsAZlRXQKysxKQndXlBXIAywtkhvXeC2Rm5QUyo7q8QHZW12XCmmmZsGZU1wsT1gzLhDWjukxYOysT1s7qMmHtsExYOysT1s7KhLWzMmHtrExYB6z8ib7DMmHtrExYOysT1s7KhHXAyoS1wzJh7axMWDsrE9bOyoS1szJhHbAyYe2wTFg7KxPWzsqEtbMyYR2wMmHtsExYOysT1s7KhLWzMmEdsDJh7bBMWDsrE9bOyoS1szJh7axMWAesTFg7LBPWzsqEtbMyYe2sTFgHrExYOywT1s7KhLWzMmHtrExYB6xMWDssE9bOyoS1szJh7axMWDsrE9YBKxPWDsuEtbMyYe2sTFg7KxPWASsT1g7LhLWzMmHtrExYOysT1gErE9YOy4S1szJh7axMWDsrE9bOyoR1wMqEtcMyYe2sTFg7KxPWzsqEdcDKhLXDMmHtrExYOysT1s7KhHXAyoS1wzJh7axMWDsrE9bOyoS1szJhHbAyYe2wTFg7KxPWzsqEtbMyYR2wMmHtsExYOysT1s7KhLWzMmEdsDJh7bBMWDsrE9bOyoS1szJh7axMWAesTFg7LBPWzsqEtbMyYe2sTFgHrExYOywT1s7KhLWzMmHtrExYB6xMWDssE9bOyoS1szJh7az+B1gQhamXahMOAAAAAElFTkSuQmCC'/>
+
+// http://paletton.com/palette.php?uid=70J0u0kpDNz00%2B%2Bc5WVAnp%2BV-1P
+
+//Core color:
+// #0360AD
+// rgb(1%, 38%, 68%)
+
+$vb_light_blue_0: rgba(  0,152,242,1);	/* Main Primary color */
+$vb_light_blue_1: rgba( 47,176,252,1);
+$vb_light_blue_2: rgba( 10,164,255,1);
+$vb_light_blue_2_alpha_50: rgba( 10,164,255,0.5);
+$vb_light_blue_3: rgba(  0,107,170,1);
+$vb_light_blue_4: rgba(  0, 83,132,1);
+
+$vb_yellow_0: rgba(255,187,  0,1);	/* Main Secondary color (1) */
+$vb_yellow_1: rgba(255,196, 35,1);
+$vb_yellow_2: rgba(255,187,  0,1);
+$vb_yellow_3: rgba(255,187,  0,1);
+$vb_yellow_4: rgba(207,152,  0,1);
+
+$vb_red_0: rgba(255, 61,  0,1);	/* Main Secondary color (2) */
+$vb_red_1: rgba(255, 88, 35,1);
+$vb_red_2: rgba(255, 61,  0,1);
+$vb_red_3: rgba(255, 61,  0,1);
+$vb_red_4: rgba(207, 50,  0,1);
 
 
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$vizzbuzz_font_monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-$vizzbuzz_font_family_base:        $vizzbuzz_font_sans_serif;
+$vb_blue_0: rgba(  0, 18,244,1);	/* Main Secondary color (1) */
+$vb_blue_1: rgba( 65, 79,252,1);
+$vb_blue_2: rgba( 26, 42,255,1);
+$vb_blue_3: rgba(  0, 13,183,1);
+$vb_blue_4: rgba(  1, 11,143,1);
 
-.vb-green {
-  color:$vizzbuzz_green !important;
-}
 
-.vb-black {
-  color:$vizzbuzz_black !important;
-}
+$vb_orange_0: rgba(255,140,  0,1);	/* Main Complement color */
+$vb_orange_1: rgba(255,156, 35,1);
+$vb_orange_2: rgba(255,140,  0,1);
+$vb_orange_3: rgba(255,140,  0,1);
+$vb_orange_4: rgba(207,114,  0,1);
+
+
+
+$vb_lime_0: rgba(219,254,  0,1);	/* Main Primary color */
+$vb_lime_1: rgba(224,255, 35,1);
+$vb_lime_2: rgba(219,255,  0,1);
+$vb_lime_3: rgba(214,248,  0,1);
+$vb_lime_4: rgba(173,201,  0,1);
+
+$vb_green_0: rgba(127,251,  0,1);	/* Main Secondary color (1) */
+$vb_green_1: rgba(146,254, 35,1);
+$vb_green_2: rgba(129,255,  0,1);
+$vb_green_3: rgba(117,232,  0,1);
+$vb_green_4: rgba( 94,186,  0,1);
+
+$vb_pink_0: rgba(251,  0, 89,1);	/* Main Secondary color (2) */
+$vb_pink_1: rgba(254, 35,112,1);
+$vb_pink_2: rgba(255,  0, 90,1);
+$vb_pink_3: rgba(226,  0, 80,1);
+$vb_pink_4: rgba(181,  0, 64,1);
+
+$vb_purple_0: rgba(220,  0,243,1);	/* Main Complement color */
+$vb_purple_1: rgba(232, 38,252,1);
+$vb_purple_2: rgba(231,  3,255,1);
+$vb_purple_3: rgba(158,  0,174,1);
+$vb_purple_4: rgba(122,  0,135,1);
+
+$vb_turquoise_0: rgba(  0,244,120,1);	/* Main Secondary color (2) */
+$vb_turquoise_1: rgba( 35,252,142,1);
+$vb_turquoise_2: rgba(  0,255,125,1);
+$vb_turquoise_3: rgba(  0,185, 91,1);
+$vb_turquoise_4: rgba(  0,145, 71,1);

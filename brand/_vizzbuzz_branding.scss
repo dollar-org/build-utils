@@ -1,0 +1,63 @@
+@import "vizzbuzz_colors";
+
+$vizzbuzz_turquoise :  $vb_turquoise_3;
+$vizzbuzz_dark_turqoise : $vb_turquoise_4;
+$vizzbuzz_light_green : $vb_green_2;
+$vizzbuzz_green : $vb_green_4;
+$vizzbuzz_dark_green : darken($vb_green_4,10%);
+$vizzbuzz_light_blue : $vb_light_blue_2;
+$vizzbuzz_light_blue_transparent: $vb_light_blue_2_alpha_50;
+$vizzbuzz_medium_blue : $vb_light_blue_3;
+$vizzbuzz_blue : darken($vizzbuzz_light_blue,10%);
+$vizzbuzz_dark_blue : darken($vizzbuzz_blue,15%);
+$vizzbuzz_darker_blue : darken($vizzbuzz_blue,20%);
+$vizzbuzz_purple : $vb_purple_3;
+$vizzbuzz_light_purple : lighten($vizzbuzz_purple,10%);
+$vizzbuzz_dark_purple : $vb_purple_4;
+$vizzbuzz_nearly_black : rgba(44, 48, 55,1);
+$vizzbuzz_black :rgba(30,34,40,1);
+$vizzbuzz_black_slightly_transparent : rgba(30,30,30,0.9);
+$vizzbuzz_really_black : darken($vizzbuzz_black,10%);
+$vizzbuzz_dark_black : darken($vizzbuzz_black,20%);
+$vizzbuzz_yellow : $vb_yellow_0;
+$vizzbuzz_light_yellow : lighten($vb_yellow_0,20%);
+$vizzbuzz_light_orange : lighten($vb_orange_0,10%);
+$vizzbuzz_orange : $vb_orange_0;
+$vizzbuzz_brown : $vb_orange_4;
+$vizzbuzz_pink : lighten($vb_pink_3,20%);
+$vizzbuzz_red : $vb_red_0;
+$vizzbuzz_white :rgb(250, 250, 250);
+$vizzbuzz_dirty_white : rgb(245, 245, 245);
+$vizzbuzz_blue_white : rgb(249, 251, 252);
+$vizzbuzz_white_very_slightly_transparent : rgba(250, 250, 250,0.9);
+$vizzbuzz_white_slightly_transparent : rgba(250, 250, 250,0.8);
+$vizzbuzz_white_very_transparent : rgba(250, 250, 250,0.7);
+$vizzbuzz_white_extremely_transparent : rgba(250, 250, 250,0.6);
+$vizzbuzz_white_almost_completely_transparent : rgba(250, 250, 250,0.3);
+$vizzbuzz_white_completely_transparent : rgba(250, 250, 250,0.2);
+$vizzbuzz_pure_white: lighten($vizzbuzz_white,10%);
+$vizzbuzz_light_grey : lighten($vizzbuzz_black,30%);
+$vizzbuzz_lighter_grey : lighten($vizzbuzz_light_grey,20%);
+$vizzbuzz_very_light_grey : lighten($vizzbuzz_light_grey,30%);
+$vizzbuzz_grey : lighten($vizzbuzz_black,25%);
+$vizzbuzz_dark_grey : lighten($vizzbuzz_black,15%);
+$vizzbuzz_darker_grey : lighten($vizzbuzz_black,10%);
+
+
+$vizzbuzz_font_friendly: Arial, "Helvetica Neue", Helvetica,  "Lucida Grande", sans-serif;
+$vizzbuzz_font_logo: "Wendy One", "Helvetica Neue", Helvetica,  "Lucida Grande", sans-serif;
+$vizzbuzz_font_sans_serif:  "Arimo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$vizzbuzz_font_serif:       Georgia, "Times New Roman", Times, serif;
+
+
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$vizzbuzz_font_monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$vizzbuzz_font_family_base:        $vizzbuzz_font_sans_serif;
+
+.vb-green {
+  color:$vizzbuzz_green !important;
+}
+
+.vb-black {
+  color:$vizzbuzz_black !important;
+}
