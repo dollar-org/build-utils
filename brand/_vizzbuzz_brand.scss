@@ -1,5 +1,7 @@
 @import "vizzbuzz_colors";
 
+
+
 $vizzbuzz_turquoise :  $vb_turquoise_3;
 $vizzbuzz_dark_turqoise : $vb_turquoise_4;
 $vizzbuzz_light_green : $vb_green_2;
@@ -44,12 +46,14 @@ $vizzbuzz_dark_grey : lighten($vizzbuzz_black,15%);
 $vizzbuzz_darker_grey : lighten($vizzbuzz_black,10%);
 
 
+
+//Fonts
+
+
 $vizzbuzz_font_friendly: Arial, "Helvetica Neue", Helvetica,  "Lucida Grande", sans-serif;
 $vizzbuzz_font_logo: "Wendy One", "Helvetica Neue", Helvetica,  "Lucida Grande", sans-serif;
 $vizzbuzz_font_sans_serif:  "Arimo", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $vizzbuzz_font_serif:       Georgia, "Times New Roman", Times, serif;
-
-
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $vizzbuzz_font_monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $vizzbuzz_font_family_base:        $vizzbuzz_font_sans_serif;
