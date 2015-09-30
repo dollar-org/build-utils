@@ -152,7 +152,7 @@ function routes3() {
                 "HostName": "$1",
                 "HttpRedirectCode": "302",
                 "Protocol": "https",
-                "ReplaceKeyWith": "$live/"
+                "ReplaceKeyWith": "live/"
             }
         }
     ]
