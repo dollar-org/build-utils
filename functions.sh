@@ -123,7 +123,7 @@ function routes3() {
     else
         live=${3}
     fi
-    aws s3 sync --cache-control "no-cache" s3://$1/${5}/ s3://$1/current/
+    aws s3 sync --cache-control "no-cache" s3://$1/${live}/ s3://$1/current/
 
     ws_config=$(cat << EOF
     {
