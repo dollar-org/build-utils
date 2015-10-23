@@ -110,7 +110,7 @@ fi
 
 
 function routes3() {
-    aws s3 sync --quiet --delete --cache-control "no-cache" --recursive s3://$1/${3}/ s3://$1/previous/
+    aws s3 sync --quiet --delete --cache-control "no-cache" s3://$1/${3}/ s3://$1/previous/
     echo ${4} > /tmp/version
     echo ${4},${codename:-},${CIRCLE_BUILD_NUM},${CIRCLE_SHA1},${CIRCLE_COMPARE_URL},$(date) > /tmp/build
     aws s3 cp  /tmp/version s3://$1/${4}/.version
