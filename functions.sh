@@ -144,16 +144,6 @@ function routes3() {
                 "Protocol": "https",
                 "ReplaceKeyPrefixWith": "$live/"
             }
-        }, {
-            "Condition": {
-                "HttpErrorCodeReturnedEquals": "404"
-            },
-            "Redirect": {
-                "HostName": "$1",
-                "HttpRedirectCode": "302",
-                "Protocol": "https",
-                "ReplaceKeyWith": "live/"
-            }
         }
     ]
 }
