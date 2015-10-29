@@ -96,12 +96,12 @@ dflatten() {
 }
 
 
-if [[ -n ${DOCKER_USER} ]]
+if [[ -n ${DOCKER_USER} ]] && which docker
 then
   docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS tutum.co
 fi
 
-if [[ -n ${TUTUM_USERNAME} ]]
+if [[ -n ${TUTUM_USERNAME} ]] && which tutum
 then
     echo "Logging in to Tutum"
     tutum login -u $TUTUM_USERNAME -p $TUTUM_PASSWORD
