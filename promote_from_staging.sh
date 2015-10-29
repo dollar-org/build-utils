@@ -91,7 +91,7 @@ export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 
-
+git config --global push.default simple
 git checkout master
 git pull
 git merge ${CIRCLE_BRANCH} -m "Auto merge"
