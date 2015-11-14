@@ -108,7 +108,7 @@ then
 fi
 git add .release .release.details
 
-git commit -a -m "Promotion of ${RELEASE}" || :
+git commit -a -m "Metadata addition to release ${RELEASE} [ci skip]" || :
 git fetch
 git push
 
