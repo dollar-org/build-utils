@@ -92,9 +92,6 @@ export HEADER=""
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 
 git config --global push.default simple
-git checkout master
-git pull
-git merge ${CIRCLE_BRANCH} -m "Auto merge"
 
 echo ${RELEASE} > .release
 echo ${RELEASE} ${TAG} ${CODENAME} ${CIRCLE_SHA1} > .release.details
@@ -114,6 +111,12 @@ git add .release .release.details
 git commit -a -m "Promotion of ${RELEASE}" || :
 git fetch
 git push
+
+git checkout master
+git pull
+git merge ${CIRCLE_BRANCH} -m "Auto merge"
+
+
 git tag ${TAG} || :
 git push --tags
 git push origin master
