@@ -110,7 +110,7 @@ git add .release .release.details
 
 git commit -a -m "Metadata addition to release ${RELEASE} [ci skip]" || :
 git fetch
-git push
+git push --set-upstream origin staging
 
 git checkout master
 git pull
