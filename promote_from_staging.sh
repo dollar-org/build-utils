@@ -112,7 +112,7 @@ then
 fi
 
 git add .release .release.details
-git commit -a -m "Release ${RELEASE}" || :
+git commit -a -m "Release ${RELEASE}, codenamed ${CODENAME}" || :
 git push --set-upstream origin ${CIRCLE_BRANCH}
 
 git checkout master
