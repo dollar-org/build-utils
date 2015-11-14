@@ -92,9 +92,12 @@ export HEADER=""
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 
 git config --global push.default simple
+git pull
+git merge master -m "Merge from master"
 
 echo ${RELEASE} > .release
 echo ${RELEASE} ${TAG} ${CODENAME} ${CIRCLE_SHA1} > .release.details
+
 
 if [[ -f README.md ]]
 then
@@ -106,16 +109,14 @@ if [ -f tutum.tmpl.yml ]
 then
     envsubst '${RELEASE}' < tutum.tmpl.yml > tutum.yml
 fi
-git add .release .release.details
 
-git commit -a -m "Metadata addition to release ${RELEASE} [ci skip]" || :
-git fetch
-git push --set-upstream origin staging
+git add .release .release.details
+git commit -a -m "Release ${RELEASE}" || :
+git push --set-upstream origin ${CIRCLE_BRANCH}
 
 git checkout master
 git pull
-git merge ${CIRCLE_BRANCH} -m "Auto merge"
-
+git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
 
 git tag ${TAG} || :
 git push --tags
