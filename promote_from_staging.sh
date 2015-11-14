@@ -95,6 +95,9 @@ git config --global push.default simple
 git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
 git pull
 git merge master -m "Merge from master"
+git checkout master
+git pull
+git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
 
 echo ${RELEASE} > .release
 echo ${RELEASE} ${TAG} ${CODENAME} ${CIRCLE_SHA1} > .release.details
@@ -115,9 +118,6 @@ git add .release .release.details
 git commit -a -m "Release ${RELEASE}, codenamed ${CODENAME}" || :
 git push --set-upstream origin ${CIRCLE_BRANCH}
 
-git checkout master
-git pull
-git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
 
 git tag ${TAG} || :
 git push --tags
