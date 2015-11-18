@@ -117,8 +117,6 @@ fi
 git add .release .release.details
 git commit -a -m "Release ${RELEASE}, codenamed ${CODENAME}" || :
 git push --set-upstream origin master
-
-
 git tag ${TAG} || :
 git push --tags
 git push origin master
