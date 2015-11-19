@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 
-cd $(dirname $0)
-DIR=$(pwd)
-cd -
+build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 
-export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
 
 if [ -f .release ]
 then
     export RELEASE=$(cat .release)
 else
-    export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
+    if [[ -n $CI ]]
+    then
+        export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
+        export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
+    else
+        export RELEASE=local
+    fi
 fi
 
 export TAG=${RELEASE}
