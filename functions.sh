@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
-export release=${CIRCLE_BUILD_NUM:-snapshot}
+cd $(dirname $0)
+DIR=$(pwd)
+cd -
+
+export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
+export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
+export TAG=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
+export release=${RELEASE}
 export AWS_DEFAULT_REGION=eu-west-1
 
 changed() {
@@ -96,16 +103,16 @@ dflatten() {
 }
 
 
-if [[ -n ${DOCKER_USER} ]] && which docker
-then
-  docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS tutum.co
-fi
-
-if [[ -n ${TUTUM_USERNAME} ]] && which tutum
-then
-    echo "Logging in to Tutum"
-    tutum login -u $TUTUM_USERNAME -p $TUTUM_PASSWORD
-fi
+#if [[ -n ${DOCKER_USER} ]] && which docker
+#then
+#  docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS tutum.co
+#fi
+#
+#if [[ -n ${TUTUM_USERNAME} ]] && which tutum
+#then
+#    echo "Logging in to Tutum"
+#    tutum login -u $TUTUM_USERNAME -p $TUTUM_PASSWORD
+#fi
 
 
 
