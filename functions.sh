@@ -5,10 +5,18 @@ DIR=$(pwd)
 cd -
 
 export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
-export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
-export TAG=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
+
+if [ -f .release ]
+then
+    export RELEASE=$(cat .release)
+else
+    export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
+fi
+
+export TAG=${RELEASE}
 export release=${RELEASE}
 export AWS_DEFAULT_REGION=eu-west-1
+
 
 changed() {
     if ${forced:-false}
