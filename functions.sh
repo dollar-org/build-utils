@@ -14,6 +14,7 @@ else
     else
         export RELEASE=local
     fi
+
 fi
 
 export TAG=${RELEASE}
@@ -143,7 +144,8 @@ function routes3() {
     fi
     aws s3 sync --quiet --delete --cache-control "no-cache" s3://$1/${live}/ s3://$1/current/
 
-    ws_config=$(cat << EOF
+    ws_config=$(
+    cat << EOF
     {
         "ErrorDocument": {
             "Key": "error.html"
@@ -167,8 +169,7 @@ function routes3() {
 }
 
 EOF
-
-    )
+)
 
     aws s3api put-bucket-website --bucket $1 --website-configuration "$ws_config"
 
