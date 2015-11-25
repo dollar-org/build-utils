@@ -15,8 +15,5 @@ DATE_TODAY=$(date +"%Y-%m-%d")
 
 curl --data "key=${RESCUE_TIME_KEY}&highlight_date=$DATE_TODAY&description=${CIRCLE_PROJECT_REPONAME}+${CIRCLE_BRANCH}+$(cat .release)&source=${env_type}+Deployment" https://www.rescuetime.com/anapi/highlights_post
 
-curl -v -H "Accept: application/json" \
-        -H "Content-Type: application/json" \
-        -X POST \
-        -d "{\"project\":\"${CIRCLE_PROJECT_REPONAME}\",\"branch\":\"${CIRCLE_BRANCH}\",\"release\":\"$(cat .release)\"}" \
-        https://zapier.com/engine/rss/131598/datadog/
+curl  -X POST -H "Content-type: application/json" -d "{\"title\":\"${CIRCLE_PROJECT_REPONAME} deployed ${RELEASE} for ${CIRCLE_BRANCH} \",\"text\":\"${CIRCLE_PROJECT_REPONAME} deployed ${RELEASE} for ${CIRCLE_BRANCH}, please see $CIRCLE_COMPARE_URL\",\"tags\":[\"${CIRCLE_PROJECT_REPONAME}\",\"${CIRCLE_BRANCH}\",\"$(cat .release)\"],\"alert_type\":\"info\"}" "https://app.datadoghq.com/api/v1/events?api_key=${DATADOG_API_KEY}"
+
