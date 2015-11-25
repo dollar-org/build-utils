@@ -94,9 +94,9 @@ export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https
 git config --global push.default simple
 git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
 git pull
-git merge master -m "Merge from master"
+git merge master -m "Merge to master"
 git checkout master
-git pull
+git pull -m "Merge to master"
 git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
 
 echo ${RELEASE} > .release
