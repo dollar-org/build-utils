@@ -15,8 +15,6 @@ DATE_TODAY=$(date +"%Y-%m-%d")
 
 curl --data "key=${RESCUE_TIME_KEY}&highlight_date=$DATE_TODAY&description=${CIRCLE_PROJECT_REPONAME}+${CIRCLE_BRANCH}+$(cat .release)&source=${env_type}+Deployment" https://www.rescuetime.com/anapi/highlights_post
 
-curl --data https://zapier.com/engine/rss/131598/datadog/
-
 curl -v -H "Accept: application/json" \
         -H "Content-Type: application/json" \
         -X POST \
