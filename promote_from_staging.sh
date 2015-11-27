@@ -90,13 +90,13 @@ EOF
 export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
-
-git config --global push.default simple
-git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
-git pull
-git rebase master
 git checkout master
 git pull
+git config --global push.default simple
+git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
+git checkout ${CIRCLE_BRANCH}
+git rebase master
+git checkout master
 git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
 
 echo ${RELEASE} > .release
