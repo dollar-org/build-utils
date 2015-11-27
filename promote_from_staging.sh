@@ -91,7 +91,7 @@ export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 git checkout master
-git pull -f
+git pull -f -n
 git config --global push.default simple
 git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
 git checkout ${CIRCLE_BRANCH}
