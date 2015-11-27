@@ -96,6 +96,7 @@ git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
 git pull
 git rebase master
 git checkout master
+git pull
 git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
 
 echo ${RELEASE} > .release
