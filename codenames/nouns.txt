@@ -1,5 +1,4 @@
 achiever
-stallions
 acoustics
 action
 activity
@@ -16,6 +15,7 @@ alarm
 alley
 amount
 amusement
+anecdote
 angle
 animal
 answer
@@ -30,6 +30,7 @@ appliance
 approval
 argument
 arithmetic
+armchair
 army
 art
 attack
@@ -134,7 +135,6 @@ cellar
 cemetery
 chain
 chair
-chairs
 chalk
 chance
 change
@@ -161,6 +161,7 @@ coach
 coast
 coat
 cobweb
+coder
 coil
 collar
 color
@@ -172,6 +173,7 @@ condition
 connection
 cook
 copper
+copse
 copy
 cord
 cork
@@ -207,13 +209,15 @@ day
 decision
 deer
 degree
+desert
 design
+designer
 desire
 desk
 detail
-development
+developer
 dinner
-dinosaurs
+dinosaur
 direction
 dirt
 discovery
@@ -237,7 +241,7 @@ driving
 drum
 duck
 ducks
-dust
+dude
 ear
 earth
 earthquake
@@ -286,11 +290,14 @@ floor
 flower
 flowers
 fly
+foal
+fob
 fog
 fold
 food
 foot
 force
+forest
 fork
 form
 fowl
@@ -329,7 +336,7 @@ group
 growth
 guide
 guitar
-gun
+hacker
 hair
 haircut
 hall
@@ -343,6 +350,7 @@ head
 hearing
 heart
 heat
+helicopter
 hen
 hill
 hobbies
@@ -357,6 +365,7 @@ horse
 horses
 hose
 hospital
+hotel
 hour
 house
 houses
@@ -388,12 +397,11 @@ juice
 jump
 kettle
 key
+keychain
 kick
 kiss
 kite
 kitten
-dude
-kittens
 kitty
 knee
 knife
@@ -403,9 +411,10 @@ laborer
 lace
 ladybug
 lake
-lamp
+lamb
 land
 language
+laptop
 laugh
 lawyer
 lead
@@ -419,6 +428,7 @@ letters
 lettuce
 level
 library
+lifeguard
 lift
 light
 limit
@@ -431,6 +441,7 @@ lizards
 loaf
 lock
 locket
+lolz
 look
 loss
 love
@@ -448,6 +459,7 @@ map
 marble
 mark
 market
+marsupial
 mask
 mass
 match
@@ -470,6 +482,7 @@ mist
 mitten
 mom
 money
+monitor
 monkey
 month
 moon
@@ -577,6 +590,7 @@ property
 prose
 protest
 punishment
+puppy
 purpose
 quartz
 queen
@@ -665,6 +679,7 @@ sleep
 sleet
 slip
 slope
+smartphone
 smash
 smell
 smile
@@ -697,6 +712,8 @@ spy
 square
 squirrel
 stage
+staircase
+stallions
 stamp
 star
 start
@@ -741,6 +758,7 @@ team
 teeth
 tent
 territory
+tessaract
 texture
 theory
 thing
@@ -788,14 +806,17 @@ twist
 umbrella
 uncle
 underwear
+unicorn
 vacation
 value
 van
 vase
 vegetable
+vernacular
 verse
 vessel
 vest
+vestibule
 view
 visitor
 voice
@@ -826,6 +847,7 @@ wish
 woman
 women
 wood
+woodland
 wool
 word
 work
@@ -838,5 +860,4 @@ writing
 yard
 year
 zebra
-marsupial
-kitty
+
