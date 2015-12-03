@@ -7,7 +7,12 @@ if [[ $CIRCLE_BRANCH == "master" ]] && [[ -f .release ]]
 then
     export RELEASE=$(cat .release)
 else
-    rm .release*
+
+    if [[ -f .release ]]
+    then
+        rm .release
+    fi
+
     if [[ -n $CI ]]
     then
         export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
