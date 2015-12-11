@@ -94,7 +94,6 @@ export HEADER=""
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 git notes --ref=version add -m "${RELEASE}" ${CIRCLE_SHA1}
 git notes --ref=codename add -m "${CODENAME}" ${CIRCLE_SHA1}
-git push origin refs/notes/commits
 git push origin "refs/notes/*"
 
 #git checkout -f master
