@@ -5,8 +5,6 @@ cd $(dirname $0)
 DIR=$(pwd)
 cd -
 
-
-
 export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
 if [[ ${CIRCLE_BRANCH} == "staging" ]]
 then
@@ -92,16 +90,18 @@ EOF
 export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
-
-git config --global push.default simple
-git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
-
 git checkout -f master
 git pull -f -n <<< "Rebasing master"
+git config --global push.default simple
+git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
 git checkout ${CIRCLE_BRANCH}
 git rebase master
 git checkout master
 git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
+
+git notes --ref=version add -m "${RELEASE}"
+git notes --ref=codename add -m "${CODENAME}"
+git fetch origin refs/notes/*:refs/notes/*
 
 if [[ -f README.md ]]
 then
@@ -115,5 +115,6 @@ then
 fi
 
 git push --set-upstream origin master
-
+git tag ${TAG} || :
+git push --tags
 git push origin master
