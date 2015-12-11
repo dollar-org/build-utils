@@ -5,7 +5,7 @@ cd $(dirname $0)
 DIR=$(pwd)
 cd -
 
-export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
+. $DIR/functions.sh
 
 git push --set-upstream origin master
 git tag ${CODENAME}-${CIRCLE_BUILD_NUM} || :
