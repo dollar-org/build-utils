@@ -2,28 +2,15 @@
 
 build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 
-
-if [[ $CIRCLE_BRANCH == "master" ]] && [[ -f .release ]]
+if [[ -n $CI ]]
 then
-    export RELEASE=$(cat .release)
-    export CODENAME=$(cat .codename)
+    export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
+    export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
 else
-
-    if [[ -f .release ]]
-    then
-        rm .release
-    fi
-
-    if [[ -n $CI ]]
-    then
-        export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
-        export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
-    else
-        export RELEASE=local
-        export CODENAME=local
-    fi
-
+    export RELEASE=local
+    export CODENAME=local
 fi
+
 
 export TAG=${RELEASE}
 export release=${RELEASE}
