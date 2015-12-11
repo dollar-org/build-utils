@@ -19,6 +19,7 @@ else
         export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
     else
         export RELEASE=local
+        export CODENAME=local
     fi
 
 fi
