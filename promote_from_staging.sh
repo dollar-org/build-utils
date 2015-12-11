@@ -97,7 +97,7 @@ git notes --ref=version add -m "${RELEASE}" ${CIRCLE_SHA1}
 git notes --ref=codename add -m "${CODENAME}" ${CIRCLE_SHA1}
 git push origin "refs/notes/*"
 
-#git checkout -f master
+git checkout -f master
 git pull -f -n <<< "Rebasing master"
 git config --global push.default simple
 git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
