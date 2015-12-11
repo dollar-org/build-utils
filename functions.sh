@@ -6,6 +6,7 @@ build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 if [[ $CIRCLE_BRANCH == "master" ]] && [[ -f .release ]]
 then
     export RELEASE=$(cat .release)
+    export CODENAME=$(cat .codename)
 else
 
     if [[ -f .release ]]

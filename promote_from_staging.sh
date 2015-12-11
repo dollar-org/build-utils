@@ -5,6 +5,8 @@ cd $(dirname $0)
 DIR=$(pwd)
 cd -
 
+
+
 export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
 if [[ ${CIRCLE_BRANCH} == "staging" ]]
 then
@@ -90,18 +92,19 @@ EOF
 export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
+git notes --ref=version add -m "${RELEASE}" ${CIRCLE_SHA1}
+git notes --ref=codename add -m "${CODENAME}" ${CIRCLE_SHA1}
+git push origin refs/notes/commits
+git push origin "refs/notes/*"
+
 git checkout -f master
 git pull -f -n <<< "Rebasing master"
 git config --global push.default simple
 git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
-git checkout ${CIRCLE_BRANCH}
-git rebase master
-git checkout master
-git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
-
-echo ${RELEASE} > .release
-echo ${RELEASE} ${TAG} ${CODENAME} ${CIRCLE_SHA1} > .release.details
-
+#git checkout ${CIRCLE_BRANCH}
+#git rebase master
+#git checkout master
+#git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
 
 if [[ -f README.md ]]
 then
@@ -114,9 +117,7 @@ then
     envsubst '${RELEASE}' < tutum.tmpl.yml > tutum.yml
 fi
 
-git add .release .release.details
-git commit -a -m "Release ${RELEASE}, codenamed ${CODENAME}" || :
 git push --set-upstream origin master
-git tag ${TAG} || :
+git tag ${RELEASE} || :
 git push --tags
 git push origin master
