@@ -116,8 +116,4 @@ fi
 
 git push --set-upstream origin master
 
-git tag ${RELEASE} || :
-git push --tags
-
-
 git push origin master
