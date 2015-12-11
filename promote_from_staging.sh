@@ -92,16 +92,17 @@ EOF
 export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
+
 git notes --ref=version add -m "${RELEASE}" ${CIRCLE_SHA1}
 git notes --ref=codename add -m "${CODENAME}" ${CIRCLE_SHA1}
 git push origin "refs/notes/*"
 
 #git checkout -f master
-#git pull -f -n <<< "Rebasing master"
+git pull -f -n <<< "Rebasing master"
 git config --global push.default simple
 git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
-#git checkout ${CIRCLE_BRANCH}
-#git rebase master
+git checkout ${CIRCLE_BRANCH}
+git rebase master
 git checkout master
 git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
 
