@@ -93,9 +93,10 @@ export HEADER=""
 
 export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 
+git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
+git pull origin "refs/notes/*"
 git notes --ref=version add -m "${RELEASE}" ${CIRCLE_SHA1}
 git notes --ref=codename add -m "${CODENAME}" ${CIRCLE_SHA1}
-git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
 git push origin "refs/notes/*"
 
 git checkout -f master
