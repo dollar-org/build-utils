@@ -22,12 +22,11 @@ gzip:
 # See README for more detailed info on each of them.
 
 
-# index_document: index.html
-# error_document: error.html
+index_document: index.html
+error_document: error.html
 
-# max_age:
-#   "assets/*": 6000
-#   "*": 300
+max_age:
+   "*": 86400
 
 # gzip_zopfli: true
 
