@@ -1,5 +1,5 @@
-s3_id: <%= ENV['AWS_BUILD_KEY'] %>
-s3_secret: <%= ENV['AWS_BUILD_SECRET'] %>
+s3_id: <%= ENV['AWS_DEPLOY_API_KEY'] %>
+s3_secret: <%= ENV['AWS_DEPLOY_API_SECRET'] %>
 s3_bucket:  <%= ENV['DEPLOY_HOST'] %>
 cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DISTRIBUTION'] %>
 site: <%= ENV['DEPLOY_DIR'] %>
