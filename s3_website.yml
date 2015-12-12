@@ -60,6 +60,7 @@ routing_rules:
       key_prefix_equals: live
     redirect:
       host_name: <%= ENV['DEPLOY_HOST'] %>
+      protocol: https
       replace_key_prefix_with: <%= ENV['DEPLOY_PREFIX'] %>
       http_redirect_code: 301
 
