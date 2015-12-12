@@ -1,0 +1,80 @@
+s3_id: AKIAJH7NBOFROD3V4Y5A
+s3_secret: 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
+s3_bucket:  <%= ENV['DEPLOY_HOST'] %>
+cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DISTRIBUTION'] %>
+site: <%= ENV['DEPLOY_DIR'] %>
+s3_key_prefix:  <%= ENV['DEPLOY_PREFIX'] %>
+cloudfront_distribution_config:
+  default_cache_behavior:
+    min_TTL: 3600
+  aliases:
+      quantity: 1
+      items:
+        CNAME:  <%= ENV['DEPLOY_HOST'] %>
+gzip:
+    - .html
+    - .css
+    - .js
+    - .md
+
+
+# Below are examples of all the available configurations.
+# See README for more detailed info on each of them.
+
+
+# index_document: index.html
+# error_document: error.html
+
+# max_age:
+#   "assets/*": 6000
+#   "*": 300
+
+# gzip_zopfli: true
+
+# See http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region for valid endpoints
+s3_endpoint: eu-west-1
+s3_reduced_redundancy: true
+
+ignore_on_server:
+  - dev
+  - local
+  - staging
+
+
+# exclude_from_upload:
+#   - those_folders_of_stuff
+#   - i_wouldnt_want_to_upload
+
+
+exclude_from_upload:
+    - jspm_packages
+    - typings
+    - .*\.pem
+    - .*\.crt
+    - .*\.key
+    - .*\.scss
+
+cloudfront_invalidate_root: true
+
+routing_rules:
+  - condition:
+      key_prefix_equals: /live/
+    redirect:
+      host_name: <%= ENV['DEPLOY_HOST'] %>
+      replace_key_prefix_with: /<%= ENV['DEPLOY_PREFIX'] %>
+      http_redirect_code: 301
+
+#concurrency_level: 5
+
+# redirects:
+#   index.php: /
+#   about.php: about.html
+#   music-files/promo.mp4: http://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+# routing_rules:
+#   - condition:
+#       key_prefix_equals: blog/some_path
+#     redirect:
+#       host_name: blog.example.com
+#       replace_key_prefix_with: some_new_path/
+#       http_redirect_code: 301
