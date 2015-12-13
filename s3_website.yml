@@ -61,14 +61,14 @@ routing_rules:
     redirect:
       host_name: <%= ENV['DEPLOY_HOST'] %>
       protocol: https
-      replace_key_prefix_with: <%= ENV['DEPLOY_PREFIX'] %>
+      replace_key_prefix_with: <%= ENV['DEPLOY_PREFIX'] %>/
       http_redirect_code: 302
   - condition:
       http_error_code_returned_equals: 404
     redirect:
       host_name: <%= ENV['DEPLOY_HOST'] %>
       protocol: https
-      replace_key_with: live
+      replace_key_with: live/
       http_redirect_code: 302
 
 #concurrency_level: 5
