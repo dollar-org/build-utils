@@ -122,6 +122,7 @@ s3_deploy() {
         s3_website push
         #   Wait for everything to be ready
         sleep 60
+        aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires "" --exclude "*.ts"  --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/current/
         aws s3 cp --quiet --cache-control "max-age=10" out/redirect-expanded.html s3://${DEPLOY_HOST}/index.html
     else
         export DEPLOY_PREFIX=${environment}
