@@ -57,7 +57,7 @@ cloudfront_invalidate_root: true
 
 routing_rules:
   - condition:
-      key_prefix_equals: live
+      key_prefix_equals: live/
     redirect:
       host_name: <%= ENV['DEPLOY_HOST'] %>
       protocol: https
