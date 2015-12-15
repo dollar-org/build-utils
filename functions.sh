@@ -125,8 +125,9 @@ s3_deploy() {
         aws s3 sync --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""   --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/current/
         aws s3 cp --quiet --cache-control "max-age=10" out/redirect-expanded.html s3://${DEPLOY_HOST}/index.html
     else
-        export DEPLOY_PREFIX=${environment}
-        aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""  --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/${environment}/
+        export DEPLOY_PREFIX=${RELEASE}-${environment}
+        aws s3 cp --quiet --cache-control "max-age=10" out/redirect-expanded.html s3://${DEPLOY_HOST}/${DEPLOY_PREFIX}/index.html
+        aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""  --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/${DEPLOY_PREFIX}/
     fi
 
 }
