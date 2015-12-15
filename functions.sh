@@ -7,7 +7,7 @@ if [[ -n $CI ]]
 then
     export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
     export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
-    export NUMERIC_RELEASE=${$CIRCLE_BUILD_NUM}
+    export NUMERIC_RELEASE=${CIRCLE_BUILD_NUM}
 else
     export RELEASE=local
     export CODENAME=local
