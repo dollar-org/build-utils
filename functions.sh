@@ -118,7 +118,7 @@ s3_deploy() {
 
     if [[ $environment == master ]]
     then
-        export DEPLOY_PREFIX=-/${NUMERIC_RELEASE}
+        export DEPLOY_PREFIX=!/${NUMERIC_RELEASE}
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
         cp -f  ${build_util_dir}/s3_website.yml .
         s3_website cfg apply --headless
