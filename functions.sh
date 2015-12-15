@@ -116,7 +116,7 @@ s3_deploy() {
 
     if [[ $environment == master ]]
     then
-        export DEPLOY_PREFIX=${CODENAME}
+        export DEPLOY_PREFIX=/@/${CODENAME}
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
         cp -f  ${build_util_dir}/s3_website.yml .
         s3_website cfg apply --headless
@@ -124,12 +124,12 @@ s3_deploy() {
         #   Wait for everything to be ready
         sleep 60
         aws s3 sync --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""   --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/current/
-        aws s3 cp --quiet --cache-control "max-age=10" out/redirect-expanded.html s3://${DEPLOY_HOST}/index.html
+        aws s3 cp ----quiet --cache-control "max-age=10" out/redirect-expanded.html s3://${DEPLOY_HOST}/index.html
     else
         export DEPLOY_PREFIX=nocache/${environment}/$(date +%s)
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
         aws s3 cp --cache-control "max-age=10" out/redirect-expanded.html s3://${DEPLOY_HOST}/nocache/${environment}/index.html
-        aws s3 cp --cache-control "max-age=86400" --expires ""  --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/${DEPLOY_PREFIX}/
+        aws s3 cp --recursive  --cache-control "max-age=86400" --expires ""  --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/${DEPLOY_PREFIX}/
         aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""  --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/${environment}/
     fi
 
