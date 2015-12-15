@@ -128,7 +128,7 @@ s3_deploy() {
         # This is a copy for when redirection can't be used (e.g. CORS) this is a synced and unversioned directory
         aws s3 sync --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""   --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/~/${environment}/
         # Finally set the redirect html file to redirect to the correct URL
-        aws s3 cp --quiet --cache-control "max-age=10" out/redirect-expanded.html s3://${DEPLOY_HOST}/index.html
+        aws s3 cp --quiet --cache-control "max-age=0, no-cache, no-store, private" out/redirect-expanded.html s3://${DEPLOY_HOST}/index.html
     else
         export DEPLOY_PREFIX=tmp/${environment}/$(date +%s)
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
@@ -136,7 +136,7 @@ s3_deploy() {
         # This is a copy for when redirection can't be used (e.g. CORS) this is a synced and unversioned directory
         aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""  --exclude "*assets/scss/*" --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/~/${environment}/
         # Finally set the redirect html file to redirect to the correct URL
-        aws s3 cp --cache-control "max-age=10" out/redirect-expanded.html s3://${DEPLOY_HOST}/nocache/${environment}/index.html
+        aws s3 cp --cache-control "max-age=0, no-cache, no-store, private" out/redirect-expanded.html s3://${DEPLOY_HOST}/nocache/${environment}/index.html
     fi
 
 }
