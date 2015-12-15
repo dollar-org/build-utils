@@ -3,7 +3,7 @@ s3_secret: <%= ENV['AWS_DEPLOY_API_SECRET'] %>
 s3_bucket:  <%= ENV['DEPLOY_HOST'] %>
 cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DISTRIBUTION'] %>
 site: <%= ENV['DEPLOY_DIR'] %>
-s3_key_prefix:  <%= ENV['DEPLOY_PREFIX'] %>
+s3_key_prefix:  "<%= ENV['DEPLOY_PREFIX'] %>"
 cloudfront_distribution_config:
   default_cache_behavior:
     min_TTL: 3600
@@ -61,7 +61,7 @@ routing_rules:
     redirect:
       host_name: <%= ENV['DEPLOY_HOST'] %>
       protocol: https
-      replace_key_prefix_with: <%= ENV['DEPLOY_PREFIX'] %>/
+      replace_key_prefix_with: "<%= ENV['DEPLOY_PREFIX'] %>/"
       http_redirect_code: 302
   - condition:
       http_error_code_returned_equals: 404
