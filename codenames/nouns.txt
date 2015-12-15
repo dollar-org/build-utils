@@ -14,8 +14,6 @@ aching
 acing
 acme
 acmes
-acmite
-acne
 acting
 action
 actor
@@ -25,8 +23,6 @@ adept
 adepts
 admin
 admins
-adult
-adults
 adverb
 advert
 advice
@@ -174,7 +170,6 @@ arches
 arcs
 ardor
 ardors
-ardour
 are
 argent
 argon
