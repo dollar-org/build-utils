@@ -7,9 +7,11 @@ if [[ -n $CI ]]
 then
     export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
     export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
+    export NUMERIC_RELEASE=${CIRCLE_BUILD_NUM}
 else
     export RELEASE=local
     export CODENAME=local
+    export NUMERIC_RELEASE=snapshot
 fi
 
 
@@ -116,7 +118,7 @@ s3_deploy() {
 
     if [[ $environment == master ]]
     then
-        export DEPLOY_PREFIX=/@/${CODENAME}
+        export DEPLOY_PREFIX=@/${NUMERIC_RELEASE}
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
         cp -f  ${build_util_dir}/s3_website.yml .
         s3_website cfg apply --headless
