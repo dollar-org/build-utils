@@ -120,11 +120,11 @@ s3_deploy() {
     then
         export DEPLOY_PREFIX="~/master"
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
-        cp -f  ${build_util_dir}/s3_website.yml .
-        s3_website cfg apply --headless
-        s3_website push
-        #   Wait for everything to be ready
-        sleep 60
+#        cp -f  ${build_util_dir}/s3_website.yml .
+#        s3_website cfg apply --headless
+#        s3_website push
+#        #   Wait for everything to be ready
+#        sleep 60
         # This is a copy for when redirection can't be used (e.g. CORS) this is a synced and unversioned directory
         aws s3 sync --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""   --exclude "*assets/scss/*" --exclude "*typings/*" --exclude "*/.git/*"  out/ s3://${DEPLOY_HOST}/~/${environment}/
         # Finally set the redirect html file to redirect to the correct URL
