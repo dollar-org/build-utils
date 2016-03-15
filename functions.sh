@@ -126,7 +126,7 @@ s3_deploy() {
 #        #   Wait for everything to be ready
 #        sleep 60
         # This is a copy for when redirection can't be used (e.g. CORS) this is a synced and unversioned directory
-        aws s3 sync --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""   --exclude "*assets/scss/*" --exclude "*typings/*" --exclude "*/.git/*"  out/ s3://${DEPLOY_HOST}/~/${environment}/
+        aws s3 sync --delete --cache-control "max-age=86400" --expires "" --exclude "*assets/scss/*" --exclude "*typings/*" --exclude "*/.git/*"  out/ s3://${DEPLOY_HOST}/~/${environment}/
         # Finally set the redirect html file to redirect to the correct URL
         aws s3 cp --cache-control "max-age=0, no-cache, no-store, private" out/redirect-expanded.html s3://${DEPLOY_HOST}/index.html
     else
