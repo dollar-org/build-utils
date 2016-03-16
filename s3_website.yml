@@ -52,6 +52,7 @@ exclude_from_upload:
     - .*\.crt
     - .*\.key
     - .*\.scss
+    - .*\.ts
 
 cloudfront_invalidate_root: true
 
