@@ -120,7 +120,7 @@ s3_deploy() {
     then
         export DEPLOY_PREFIX=""
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
-        cp -f  ${build_util_dir}/s3_website.yml .
+        [ -f  s3_website.yml ] || cp -f  ${build_util_dir}/s3_website.yml .
         s3_website cfg apply --headless
         s3_website push
         sleep 10
