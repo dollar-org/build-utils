@@ -119,12 +119,10 @@ s3_deploy() {
     if [[ $environment == master ]]
     then
         export DEPLOY_PREFIX=""
-        envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
         [ -f  s3_website.yml ] || cp -f  ${build_util_dir}/s3_website.yml .
         s3_website cfg apply --headless
         s3_website push
         sleep 10
-        aws s3 cp --cache-control "max-age=0, no-cache, no-store, private" out/redirect-expanded.html s3://${DEPLOY_HOST}/index.html
     else
         export DEPLOY_PREFIX=tmp/${environment}/$(date +%s)
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
