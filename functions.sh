@@ -121,7 +121,7 @@ s3_deploy() {
         export DEPLOY_PREFIX="/"
         [ -f  s3_website.yml ] || cp -f ${build_util_dir}/s3_website.yml .
         s3_website cfg apply --headless
-        s3_website push --force
+        s3_website push
         sleep 10
     else
         export DEPLOY_PREFIX="~/${environment}"
