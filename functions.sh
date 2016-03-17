@@ -118,13 +118,13 @@ s3_deploy() {
 
     if [[ $environment == master ]]
     then
-        export DEPLOY_PREFIX=""
-        [ -f  s3_website.yml ] || cp -f  ${build_util_dir}/s3_website.yml .
+        export DEPLOY_PREFIX="/"
+        [ -f  s3_website.yml ] || cp -f ${build_util_dir}/s3_website.yml .
         s3_website cfg apply --headless
         s3_website push
         sleep 10
     else
-        export DEPLOY_PREFIX=tmp/${environment}/$(date +%s)
+        export DEPLOY_PREFIX="~/${environment}"
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
         aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""  --exclude "*assets/scss/*" --exclude "*/.git/*"  --exclude "*typings/*"   out/ s3://${DEPLOY_HOST}/~/${environment}/
 
