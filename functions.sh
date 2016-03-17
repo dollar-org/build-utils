@@ -122,7 +122,7 @@ s3_deploy() {
         envsubst < ${build_util_dir}/redirect.html > out/redirect-expanded.html
         [ -f  s3_website.yml ] || cp -f ${build_util_dir}/s3_website.yml .
         s3_website cfg apply --headless
-        s3_website push
+        s3_website push --force
         sleep 10
         aws s3 cp  --cache-control "max-age=0, no-cache, no-store, private" --expires ""    out/redirect-expanded.html s3://${DEPLOY_HOST}/~/${environment}/index.html
     else
