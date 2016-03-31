@@ -25,7 +25,7 @@ then
     export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
     if [[ $use_gitflow == true ]]
     then
-        export RELEASE="$(echo $CIRCLE_BRANCH | trap '/' '-')-${CIRCLE_BUILD_NUM}}"
+        export RELEASE="$(echo $CIRCLE_BRANCH | tr '/' '-')-${CIRCLE_BUILD_NUM}}"
     else
         export RELEASE="${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}"
     fi
