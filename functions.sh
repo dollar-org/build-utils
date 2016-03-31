@@ -3,11 +3,33 @@
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
 build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 
+if [[ $CIRCLE_BRANCH == release* ]]
+then
+    export environment=staging
+    export use_gitflow=true
+elif [[ $CIRCLE_BRANCH == feature* ]]
+then
+    export environment=staging
+    export use_gitflow=true
+elif [[ $CIRCLE_BRANCH == bugfix* ]]
+then
+    export environment=staging
+    export use_gitflow=true
+else
+    export environment=${CIRCLE_BRANCH:-local}
+    export use_gitflow=false
+fi
+
 if [[ -n $CI ]]
 then
     export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
-    export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
-    export NUMERIC_RELEASE=${CIRCLE_BUILD_NUM}
+    if [[ $use_gitflow == true ]]
+    then
+        export RELEASE="$(echo $CIRCLE_BRANCH | trap '/' '-')-${CIRCLE_BUILD_NUM}}"
+    else
+        export RELEASE="${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}"
+    fi
+    export NUMERIC_RELEASE="${CIRCLE_BUILD_NUM}"
 else
     export RELEASE=local
     export CODENAME=local
@@ -15,10 +37,9 @@ else
 fi
 
 
-export TAG=${RELEASE}
 export release=${RELEASE}
 export AWS_DEFAULT_REGION=eu-west-1
-export environment=${CIRCLE_BRANCH:-local}
+
 
 
 
@@ -127,9 +148,9 @@ s3_deploy() {
 #        aws s3 cp  --cache-control "max-age=0, no-cache, no-store, private" --expires ""    ${DEPLOY_DIR}/redirect-expanded.html s3://${DEPLOY_HOST}/~/${environment}/index.html
 #        aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION} --paths /!/*
     else
-        export DEPLOY_PREFIX="~/${environment}"
+        export DEPLOY_PREFIX="~/${CIRCLE_BRANCH:-local}"
         envsubst < ${build_util_dir}/redirect.html > ${DEPLOY_DIR}/redirect-expanded.html
-        aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""  --exclude "*assets/scss/*" --exclude "*/.git/*"  --exclude "*typings/*"   ${DEPLOY_DIR}/ s3://${DEPLOY_HOST}/~/${environment}/
+        aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""  --exclude "*assets/scss/*" --exclude "*/.git/*"  --exclude "*typings/*"   ${DEPLOY_DIR}/ s3://${DEPLOY_HOST}/~/${DEPLOY_PREFIX}/
         aws s3 cp  --cache-control "max-age=0, no-cache, no-store, private" --expires ""    ${DEPLOY_DIR}/redirect-expanded.html s3://${DEPLOY_HOST}/~/${environment}/index.html
 
     fi
