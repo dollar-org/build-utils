@@ -150,7 +150,7 @@ s3_deploy() {
     else
         export DEPLOY_PREFIX="~/${CIRCLE_BRANCH:-local}"
         envsubst < ${build_util_dir}/redirect.html > ${DEPLOY_DIR}/redirect-expanded.html
-        aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""  --exclude "*assets/scss/*" --exclude "*/.git/*"  --exclude "*typings/*"   ${DEPLOY_DIR}/ s3://${DEPLOY_HOST}/~/${DEPLOY_PREFIX}/
+        aws s3 sync  --delete --cache-control "max-age=0, no-cache, no-store, private" --expires ""  --exclude "*assets/scss/*" --exclude "*/.git/*"  --exclude "*typings/*"   ${DEPLOY_DIR}/ s3://${DEPLOY_HOST}/${DEPLOY_PREFIX}/
         aws s3 cp  --cache-control "max-age=0, no-cache, no-store, private" --expires ""    ${DEPLOY_DIR}/redirect-expanded.html s3://${DEPLOY_HOST}/~/${environment}/index.html
 
     fi
