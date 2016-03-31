@@ -15,6 +15,10 @@ elif [[ $CIRCLE_BRANCH == bugfix* ]]
 then
     export environment=staging
     export use_gitflow=true
+elif [[ $CIRCLE_BRANCH == support* ]]
+then
+    export environment=staging
+    export use_gitflow=true
 else
     export environment=${CIRCLE_BRANCH:-local}
     export use_gitflow=false
