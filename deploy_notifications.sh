@@ -11,7 +11,7 @@ cd -
 env_type="Dev"
 GITLOG=$(git log -1 HEAD --pretty=format:%s)
 
-if [[ ${CIRCLE_BRANCH} == "staging" ]] || [[ ${CIRCLE_BRANCH} == "master" ]]
+if  [[ ${CIRCLE_BRANCH} == "master" ]]
 then
     env_type="Live"
 fi
@@ -21,6 +21,6 @@ ${BUILD_UTILS_DIR}/raygun/deployment.sh -v "${RELEASE}" -t "$RAYGUN_EXTERNAL_TOK
 DATE_TODAY=$(date +"%Y-%m-%d")
 
 curl --data "key=${RESCUE_TIME_KEY}&highlight_date=$DATE_TODAY&description=${CIRCLE_PROJECT_REPONAME}+${CIRCLE_BRANCH}+${RELEASE}&source=${env_type}+Deployment" https://www.rescuetime.com/anapi/highlights_post
-
-curl  -X POST -H "Content-type: application/json" -d "{\"title\":\"${CIRCLE_PROJECT_REPONAME} deployed ${RELEASE} for ${CIRCLE_BRANCH} \",\"text\":\"${CIRCLE_PROJECT_REPONAME} deployed ${RELEASE} for ${CIRCLE_BRANCH}, please see $CIRCLE_COMPARE_URL\",\"tags\":[\"${CIRCLE_PROJECT_REPONAME}\",\"${CIRCLE_BRANCH}\",\"${RELEASE}\"],\"alert_type\":\"info\"}" "https://app.datadoghq.com/api/v1/events?api_key=${DATADOG_API_KEY}"
+#
+#curl  -X POST -H "Content-type: application/json" -d "{\"title\":\"${CIRCLE_PROJECT_REPONAME} deployed ${RELEASE} for ${CIRCLE_BRANCH} \",\"text\":\"${CIRCLE_PROJECT_REPONAME} deployed ${RELEASE} for ${CIRCLE_BRANCH}, please see $CIRCLE_COMPARE_URL\",\"tags\":[\"${CIRCLE_PROJECT_REPONAME}\",\"${CIRCLE_BRANCH}\",\"${RELEASE}\"],\"alert_type\":\"info\"}" "https://app.datadoghq.com/api/v1/events?api_key=${DATADOG_API_KEY}"
 
