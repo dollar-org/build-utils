@@ -158,6 +158,7 @@ s3_deploy() {
 #        aws s3 cp  --cache-control "max-age=0, no-cache, no-store, private" --expires ""    ${DEPLOY_DIR}/redirect-expanded.html s3://${DEPLOY_HOST}/~/${environment}/index.html
 
     fi
+    echo https://${DEPLOY_HOST}/${DEPLOY_PREFIX}/ > ~/.build-utils-last-deploy-url
 
 }
 
