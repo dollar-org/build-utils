@@ -9,11 +9,11 @@ then
     export use_gitflow=true
 elif [[ $CIRCLE_BRANCH == feature* ]]
 then
-    export environment=staging
+    export environment=dev
     export use_gitflow=true
 elif [[ $CIRCLE_BRANCH == bugfix* ]]
 then
-    export environment=staging
+    export environment=dev
     export use_gitflow=true
 elif [[ $CIRCLE_BRANCH == support* ]]
 then
