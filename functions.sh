@@ -37,7 +37,7 @@ then
 else
     export RELEASE=local
     export CODENAME=local
-    export NUMERIC_RELEASE=-$(date +%s)
+    export NUMERIC_RELEASE=dev-$(date +%s)
 fi
 
 
