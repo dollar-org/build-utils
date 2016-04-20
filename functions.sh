@@ -44,17 +44,19 @@ fi
 if [[ -n $CI ]]
 then
     export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
-    if [[ -z $PRODUCTION_BUILD ]]
+    if [[ -n $PRODUCTION_BUILD ]]
     then
-        export RELEASE="$(echo $CIRCLE_BRANCH | tr '/' '-')-${CIRCLE_BUILD_NUM}}"
+        export RELEASE="${CODENAME}-${CIRCLE_BUILD_NUM}"
     else
-        export RELEASE="${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}"
+        export RELEASE="$(echo $CIRCLE_BRANCH | tr '/' '-')-${CIRCLE_BUILD_NUM}}"
     fi
-    export NUMERIC_RELEASE="${CIRCLE_BUILD_NUM}"
+    export RELEASE_NUMBER="${CIRCLE_BUILD_NUM}"
+    export RELEASE_ID="${CIRCLE_SHA1}"
 else
     export RELEASE=local
+    export RELEASE_ID=local
     export CODENAME=local
-    export NUMERIC_RELEASE=0
+    export RELEASE_NUMBER=0
 fi
 
 
