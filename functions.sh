@@ -3,38 +3,48 @@
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
 build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 
-if [[ ! -z $CI_PULL_REQUEST ]] || [[ $CIRCLE_BRANCH == "master" ]]
+if [[ -n $CI_PULL_REQUEST ]]
 then
-    export PRODUCTION_BUILD=true
+        export PRODUCTION_BUILD=true
+        export environment=staging
+        export use_gitflow=true
+        echo "Production ready build on ${CIRCLE_BRANCH}"
+elif [[ $CIRCLE_BRANCH == "master" ]]
+then
+        export PRODUCTION_BUILD=true
+        export environment=master
+        export use_gitflow=true
+        echo "Production final build"
 else
-    echo "Non release build"
+        echo "Non production ready build on ${CIRCLE_BRANCH}"
+    if [[ $CIRCLE_BRANCH == release* ]]
+    then
+        export environment=dev
+        export use_gitflow=true
+    elif [[ $CIRCLE_BRANCH == feature* ]]
+    then
+        export environment=dev
+        export use_gitflow=true
+    elif [[ $CIRCLE_BRANCH == bugfix* ]]
+    then
+        export environment=dev
+        export use_gitflow=true
+    elif [[ $CIRCLE_BRANCH == support* ]] || [[ $CIRCLE_BRANCH == hotfix* ]]
+    then
+        export environment=dev
+        export use_gitflow=true
+    else
+        export environment=${CIRCLE_BRANCH:-local}
+        export use_gitflow=false
+    fi
+
 fi
 
-if [[ $CIRCLE_BRANCH == release* ]]
-then
-    export environment=staging
-    export use_gitflow=true
-elif [[ $CIRCLE_BRANCH == feature* ]]
-then
-    export environment=dev
-    export use_gitflow=true
-elif [[ $CIRCLE_BRANCH == bugfix* ]]
-then
-    export environment=dev
-    export use_gitflow=true
-elif [[ $CIRCLE_BRANCH == support* ]] || [[ $CIRCLE_BRANCH == hotfix* ]]
-then
-    export environment=staging
-    export use_gitflow=true
-else
-    export environment=${CIRCLE_BRANCH:-local}
-    export use_gitflow=false
-fi
 
 if [[ -n $CI ]]
 then
     export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
-    if [[ $use_gitflow == true ]]
+    if [[ -z $PRODUCTION_BUILD ]]
     then
         export RELEASE="$(echo $CIRCLE_BRANCH | tr '/' '-')-${CIRCLE_BUILD_NUM}}"
     else
