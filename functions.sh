@@ -41,6 +41,8 @@ else
 fi
 
 
+export ARTIFACT_DIR=${CIRCLE_ARTIFACTS:-.}
+
 if [[ -n $CI ]]
 then
     export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
