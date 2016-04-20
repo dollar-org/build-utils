@@ -3,6 +3,13 @@
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
 build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 
+if [[ ! -z $CI_PULL_REQUEST ]] || [[ $CIRCLE_BRANCH == "master" ]]
+then
+    export PRODUCTION_BUILD=true
+else
+    echo "Non release build"
+fi
+
 if [[ $CIRCLE_BRANCH == release* ]]
 then
     export environment=staging
@@ -37,7 +44,7 @@ then
 else
     export RELEASE=local
     export CODENAME=local
-    export NUMERIC_RELEASE=dev-$(date +%s)
+    export NUMERIC_RELEASE=0
 fi
 
 
