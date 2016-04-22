@@ -16,12 +16,13 @@ then
         export use_gitflow=true
         echo "Production final build"
 else
-        echo "Non production ready build on ${CIRCLE_BRANCH}"
+
     if [[ $CIRCLE_BRANCH == release* ]]
     then
         export PRODUCTION_BUILD=true
         export environment=staging
         export use_gitflow=true
+        echo "Production ready build on ${CIRCLE_BRANCH}"
     elif [[ $CIRCLE_BRANCH == feature* ]]
     then
         export environment=dev
@@ -32,8 +33,10 @@ else
         export use_gitflow=true
     elif [[ $CIRCLE_BRANCH == support* ]] || [[ $CIRCLE_BRANCH == hotfix* ]]
     then
-        export environment=dev
+        export PRODUCTION_BUILD=true
+        export environment=staging
         export use_gitflow=true
+        echo "Production ready build on ${CIRCLE_BRANCH}"
     else
         export environment=${CIRCLE_BRANCH:-local}
         export use_gitflow=false
