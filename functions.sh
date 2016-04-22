@@ -19,7 +19,8 @@ else
         echo "Non production ready build on ${CIRCLE_BRANCH}"
     if [[ $CIRCLE_BRANCH == release* ]]
     then
-        export environment=dev
+        export PRODUCTION_BUILD=true
+        export environment=staging
         export use_gitflow=true
     elif [[ $CIRCLE_BRANCH == feature* ]]
     then
