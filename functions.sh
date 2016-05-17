@@ -8,7 +8,11 @@ then
         export PRODUCTION_BUILD=true
         export environment=master
         export use_gitflow=true
-        echo "MASTER PRODUCTION BUILD"
+        echo
+        echo "*********************************"
+        echo "**** MASTER PRODUCTION BUILD ****"
+        echo "*********************************"
+        echo
 elif [[ -n $CI_PULL_REQUEST ]]
 then
         export PRODUCTION_BUILD=true
@@ -44,7 +48,7 @@ fi
 
 if [[ -n ${PRODUCTION_BUILD} ]]
 then
-    echo "This is a *production build* so it will take longer than usual."
+    echo "This is a production build so it will take longer than usual."
 fi
 
 export ARTIFACT_DIR=${CIRCLE_ARTIFACTS:-.}
