@@ -44,6 +44,10 @@ else
 
 fi
 
+if [[ -n ${PRODUCTION_BUILD} ]]
+then
+    echo "This is a *production build* so it will take longer than usual."
+fi
 
 export ARTIFACT_DIR=${CIRCLE_ARTIFACTS:-.}
 
