@@ -3,18 +3,18 @@
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
 build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 
-if [[ -n $CI_PULL_REQUEST ]]
+if [[ $CIRCLE_BRANCH == "master" ]]
+then
+        export PRODUCTION_BUILD=true
+        export environment=master
+        export use_gitflow=true
+        echo "Production build"
+elif [[ -n $CI_PULL_REQUEST ]]
 then
         export PRODUCTION_BUILD=true
         export environment=staging
         export use_gitflow=true
         echo "Production ready build on ${CIRCLE_BRANCH}"
-elif [[ $CIRCLE_BRANCH == "master" ]]
-then
-        export PRODUCTION_BUILD=true
-        export environment=master
-        export use_gitflow=true
-        echo "Production final build"
 else
 
     if [[ $CIRCLE_BRANCH == release* ]]
