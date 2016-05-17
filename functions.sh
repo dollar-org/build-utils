@@ -8,13 +8,13 @@ then
         export PRODUCTION_BUILD=true
         export environment=master
         export use_gitflow=true
-        echo "Production build"
+        echo "MASTER PRODUCTION BUILD"
 elif [[ -n $CI_PULL_REQUEST ]]
 then
         export PRODUCTION_BUILD=true
         export environment=staging
         export use_gitflow=true
-        echo "Production ready build on ${CIRCLE_BRANCH}"
+        echo "PART OF PR ${CI_PULL_REQUEST}"
 else
 
     if [[ $CIRCLE_BRANCH == release* ]]
@@ -22,7 +22,6 @@ else
         export PRODUCTION_BUILD=true
         export environment=staging
         export use_gitflow=true
-        echo "Production ready build on ${CIRCLE_BRANCH}"
     elif [[ $CIRCLE_BRANCH == feature* ]]
     then
         export environment=dev
@@ -36,7 +35,6 @@ else
         export PRODUCTION_BUILD=true
         export environment=staging
         export use_gitflow=true
-        echo "Production ready build on ${CIRCLE_BRANCH}"
     else
         export environment=${CIRCLE_BRANCH:-local}
         export use_gitflow=false
