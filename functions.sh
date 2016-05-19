@@ -58,7 +58,7 @@ then
     export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
     if [[ -n $PRODUCTION_BUILD ]]
     then
-        export RELEASE="${CODENAME}-${CIRCLE_BUILD_NUM}"
+        export RELEASE="${MAJOR_VERSION:-}.${CIRCLE_BUILD_NUM}"
     else
         export RELEASE="$(echo $CIRCLE_BRANCH | tr '/' '-')-${CIRCLE_BUILD_NUM}}"
     fi
@@ -73,8 +73,8 @@ fi
 
 
 export release=${RELEASE}
+export RELEASE_VERSION="${RELEASE}"
 export AWS_DEFAULT_REGION=eu-west-1
-export RELEASE_VERSION="${MAJOR_VERSION:-}.${CIRCLE_BUILD_NUM}"
 
 
 
@@ -111,26 +111,6 @@ undeployed() {
 
 
 
-#See https://github.com/projectatomic/ContainerApplicationGenericLabels
-
-dbuild() {
-      if [[ $CI == "true" ]]
-      then
-         echo -n "LABEL vendor=\"Vizzbuzz (Cazcade Limited)\" " >> Dockerfile
-         echo -n " build_date=\"$(date)\"" >> Dockerfile
-         echo -n " release=\"${release}\"" >> Dockerfile
-         echo -n " architecture=\"amd64\"" >> Dockerfile
-
-         echo -n " vizzbuzz.build.sha1=\"${CIRCLE_SHA1:-}\"" >> Dockerfile
-         echo -n " vizzbuzz.build.number=\"${CIRCLE_BUILD_NUM:-0}\"" >> Dockerfile
-         echo -n " vizzbuzz.build.date.human=\"$(date)\"" >> Dockerfile
-         echo  " vizzbuzz.build.date.millis=\"$(date +%s)000\"" >> Dockerfile
-         docker build ${cache_flags:-} -t $1 .
-      else
-         docker build ${cache_flags:-} -t $1 .
-      fi
-}
-
 copy() {
  rsync -av $@
 }
@@ -141,34 +121,6 @@ ifnewer() {
         eval $3
     fi
 
-}
-
-update_config() {
-    ifnewer public/template_config.js public/vb_config.js "envsubst < public/template_config.js > public/vb_config.js"
-}
-
-
-#if [[ $ttag == "master" ]]
-#then
-#    version="${CIRCLE_BUILD_NUM:-dev}"
-#else
-#    version=$ttag
-#fi
-
-dpush() {
-    if docker images | grep "^${1} "
-    then
-        docker tag -f $1 tutum.co/neilellis/$1:${release}
-        docker push tutum.co/neilellis/$1:${release}
-    fi
-}
-
-dflatten() {
-    cont=$(docker run -d $1)
-    sleep 5
-    docker logs $cont
-    docker export $cont | docker import - $1
-    docker kill $cont
 }
 
 s3_release() {
