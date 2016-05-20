@@ -74,6 +74,7 @@ fi
 
 export release=${RELEASE}
 export RELEASE_VERSION="${RELEASE}"
+export RELEASE_NAME="${CODENAME}"
 export AWS_DEFAULT_REGION=eu-west-1
 
 
