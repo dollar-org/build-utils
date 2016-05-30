@@ -113,7 +113,7 @@ undeployed() {
 
 
 copy() {
- rsync -av $@
+ rsync -tav $@
 }
 
 ifnewer() {
