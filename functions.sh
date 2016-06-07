@@ -2,7 +2,7 @@
 
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
 build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
-
+export PRODUCTION_BUILD=
 if [[ $CIRCLE_BRANCH == "master" ]]
 then
         export PRODUCTION_BUILD=true
@@ -13,9 +13,9 @@ then
         echo "**** MASTER PRODUCTION BUILD ****"
         echo "*********************************"
         echo
-elif [[ -n $CI_PULL_REQUEST ]]
+elif [[ -n ${CI_PULL_REQUEST:=} ]]
 then
-        export PRODUCTION_BUILD=true
+        export PRODUCTION_BUILD=yes
         export environment=staging
         export use_gitflow=true
         echo "PART OF PR ${CI_PULL_REQUEST}"
@@ -23,23 +23,26 @@ else
 
     if [[ $CIRCLE_BRANCH == release* ]]
     then
-        export PRODUCTION_BUILD=true
+        export PRODUCTION_BUILD=
         export environment=staging
         export use_gitflow=true
     elif [[ $CIRCLE_BRANCH == feature* ]]
     then
+        export PRODUCTION_BUILD=
         export environment=dev
         export use_gitflow=true
     elif [[ $CIRCLE_BRANCH == bugfix* ]]
     then
+        export PRODUCTION_BUILD=
         export environment=dev
         export use_gitflow=true
     elif [[ $CIRCLE_BRANCH == support* ]] || [[ $CIRCLE_BRANCH == hotfix* ]]
     then
-        export PRODUCTION_BUILD=true
+        export PRODUCTION_BUILD=
         export environment=staging
         export use_gitflow=true
     else
+        export PRODUCTION_BUILD=
         export environment=${CIRCLE_BRANCH:-local}
         export use_gitflow=false
     fi
@@ -53,7 +56,7 @@ fi
 
 export ARTIFACT_DIR=${CIRCLE_ARTIFACTS:-.}
 
-if [[ -n $CI ]]
+if [[ -n ${CI:=} ]]
 then
     export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
     if [[ -n $PRODUCTION_BUILD ]]
