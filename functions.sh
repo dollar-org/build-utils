@@ -5,7 +5,7 @@ build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 export PRODUCTION_BUILD=
 if [[ $CIRCLE_BRANCH == "master" ]]
 then
-        export PRODUCTION_BUILD=true
+        export PRODUCTION_BUILD=yes
         export environment=master
         export use_gitflow=true
         echo
@@ -51,7 +51,21 @@ fi
 
 if [[ -n ${PRODUCTION_BUILD} ]]
 then
-    echo "This is a production build so it will take longer than usual."
+    if [[ $CIRCLE_BRANCH == "master" ]]
+    then
+        echo
+        echo "*********************************"
+        echo "**** MASTER PRODUCTION BUILD ****"
+        echo "*********************************"
+        echo
+    else
+        echo
+        echo "*********************************"
+        echo "****     PRODUCTION BUILD    ****"
+        echo "*********************************"
+        echo
+    fi
+
 fi
 
 export ARTIFACT_DIR=${CIRCLE_ARTIFACTS:-.}
