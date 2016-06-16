@@ -24,13 +24,3 @@ curl --data "key=${RESCUE_TIME_KEY}&highlight_date=$DATE_TODAY&description=${CIR
 #
 #curl  -X POST -H "Content-type: application/json" -d "{\"title\":\"${CIRCLE_PROJECT_REPONAME} deployed ${RELEASE} for ${CIRCLE_BRANCH} \",\"text\":\"${CIRCLE_PROJECT_REPONAME} deployed ${RELEASE} for ${CIRCLE_BRANCH}, please see $CIRCLE_COMPARE_URL\",\"tags\":[\"${CIRCLE_PROJECT_REPONAME}\",\"${CIRCLE_BRANCH}\",\"${RELEASE}\"],\"alert_type\":\"info\"}" "https://app.datadoghq.com/api/v1/events?api_key=${DATADOG_API_KEY}"
 
-ACCESS_TOKEN=7f81ddceeb624f11bc36c5ab89a4295f
-ENVIRONMENT=${environment}
-LOCAL_USERNAME=`whoami`
-REVISION=`git log -n 1 --pretty=format:"%H"`
-
-curl https://api.rollbar.com/api/1/deploy/ \
-  -F access_token=$ACCESS_TOKEN \
-  -F environment=$ENVIRONMENT \
-  -F revision=$REVISION \
-  -F local_username=$LOCAL_USERNAME
