@@ -3,7 +3,8 @@
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
 build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 export PRODUCTION_BUILD=
-if [[ $CIRCLE_BRANCH == "master" ]]
+export BRANCH=${CIRCLE_BRANCH:=local}
+if [[ ${BRANCH} == "master" ]]
 then
         export PRODUCTION_BUILD=yes
         export environment=master
@@ -21,22 +22,22 @@ then
         echo "PART OF PR ${CI_PULL_REQUEST}"
 else
 
-    if [[ $CIRCLE_BRANCH == release* ]]
+    if [[ ${BRANCH} == release* ]]
     then
         export PRODUCTION_BUILD=
         export environment=staging
         export use_gitflow=true
-    elif [[ $CIRCLE_BRANCH == feature* ]]
+    elif [[ ${BRANCH} == feature* ]]
     then
         export PRODUCTION_BUILD=
         export environment=dev
         export use_gitflow=true
-    elif [[ $CIRCLE_BRANCH == bugfix* ]]
+    elif [[ ${BRANCH} == bugfix* ]]
     then
         export PRODUCTION_BUILD=
         export environment=dev
         export use_gitflow=true
-    elif [[ $CIRCLE_BRANCH == support* ]] || [[ $CIRCLE_BRANCH == hotfix* ]]
+    elif [[ ${BRANCH} == support* ]] || [[ ${BRANCH} == hotfix* ]]
     then
         export PRODUCTION_BUILD=
         export environment=staging
@@ -51,7 +52,7 @@ fi
 
 if [[ -n ${PRODUCTION_BUILD} ]]
 then
-    if [[ $CIRCLE_BRANCH == "master" ]]
+    if [[ ${BRANCH} == "master" ]]
     then
         echo
         echo "*********************************"
@@ -77,7 +78,7 @@ then
     then
         export RELEASE="${MAJOR_VERSION:-}.${CIRCLE_BUILD_NUM}"
     else
-        export RELEASE="$(echo $CIRCLE_BRANCH | tr '/' '-')-${CIRCLE_BUILD_NUM}}"
+        export RELEASE="$(echo ${BRANCH} | tr '/' '-')-${CIRCLE_BUILD_NUM}}"
     fi
     export RELEASE_NUMBER="${CIRCLE_BUILD_NUM}"
     export RELEASE_ID="${CIRCLE_SHA1}"
