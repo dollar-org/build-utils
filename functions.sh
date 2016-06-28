@@ -131,7 +131,7 @@ undeployed() {
 
 
 copy() {
- rsync -tav $@
+ rsync -tavq $@
 }
 
 ifnewer() {
