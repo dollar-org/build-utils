@@ -143,7 +143,11 @@ ifnewer() {
 }
 
 dirHasChanged() {
-    [[ ! -f ${BUILD_DIR}/.${1} ]] || [[ -n $(find $2 -prune -newer ${BUILD_DIR}/.${1}) ]]
+    [[ -n ${PRODUCTION_BUILD} ]] || [[ ! -f ${BUILD_DIR}/.${1} ]] || [[ -n $(find $2 -prune -newer ${BUILD_DIR}/.${1}) ]]
+}
+
+markDone() {
+    touch ${BUILD_DIR}/.${1}
 }
 
 s3_release() {
