@@ -142,6 +142,10 @@ ifnewer() {
 
 }
 
+dirHasChanged() {
+    [[ ! -f ${BUILD_DIR}/.${1}]] || [[ -n $(find $2 -prune -newer ${BUILD_DIR}/.${1}) ]]
+}
+
 s3_release() {
       export DEPLOY_PREFIX="version/${RELEASE_VERSION}"
      envsubst < ${build_util_dir}/redirect.html > ${DEPLOY_DIR}/redirect-expanded.html
