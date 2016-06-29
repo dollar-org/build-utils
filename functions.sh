@@ -132,7 +132,7 @@ undeployed() {
 
 copy() {
  rsync -tavq $@
-}
+}   
 
 ifnewer() {
     if [[ $1 -nt $2 ]]
