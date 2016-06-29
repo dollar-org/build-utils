@@ -143,7 +143,7 @@ ifnewer() {
 }
 
 dirHasChanged() {
-    [[ ! -f ${BUILD_DIR}/.${1}]] || [[ -n $(find $2 -prune -newer ${BUILD_DIR}/.${1}) ]]
+    [[ ! -f ${BUILD_DIR}/.${1} ]] || [[ -n $(find $2 -prune -newer ${BUILD_DIR}/.${1}) ]]
 }
 
 s3_release() {
