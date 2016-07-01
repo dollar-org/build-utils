@@ -3,7 +3,7 @@
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
 build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
 export PRODUCTION_BUILD=
-export BRANCH=${CIRCLE_BRANCH:=local}
+export BRANCH=${CI_BRANCH:=local}
 if [[ ${BRANCH} == "master" ]]
 then
         export PRODUCTION_BUILD=yes
@@ -44,7 +44,7 @@ else
         export use_gitflow=true
     else
         export PRODUCTION_BUILD=
-        export environment=${CIRCLE_BRANCH:-local}
+        export environment=${CI_BRANCH:-local}
         export use_gitflow=false
     fi
 
@@ -69,19 +69,19 @@ then
 
 fi
 
-export ARTIFACT_DIR=${CIRCLE_ARTIFACTS:-.}
+export ARTIFACT_DIR=${CI_ARTIFACTS:-.}
 
 if [[ -n ${CI:=} ]]
 then
-    export CODENAME=$($build_util_dir/codenames/name.sh $CIRCLE_SHA1)
+    export CODENAME=$($build_util_dir/codenames/name.sh $CI_SHA1)
     if [[ -n $PRODUCTION_BUILD ]]
     then
-        export RELEASE="${MAJOR_VERSION:-}.${CIRCLE_BUILD_NUM}"
+        export RELEASE="${MAJOR_VERSION:-}.${CI_BUILD_NUM}"
     else
-        export RELEASE="$(echo ${BRANCH} | tr '/' '-')-${CIRCLE_BUILD_NUM}}"
+        export RELEASE="$(echo ${BRANCH} | tr '/' '-')-${CI_BUILD_NUM}}"
     fi
-    export RELEASE_NUMBER="${CIRCLE_BUILD_NUM}"
-    export RELEASE_ID="${CIRCLE_SHA1}"
+    export RELEASE_NUMBER="${CI_BUILD_NUM}"
+    export RELEASE_ID="${CI_SHA1}"
 else
     export RELEASE=local
     export RELEASE_ID=local
@@ -99,13 +99,13 @@ export AWS_DEFAULT_REGION=eu-west-1
 
 
 changed() {
-    if ${forced:-false}
+    if ${forced:=false}
     then
         true
     else
         if [[ -n $CI && -f ~/build-cache/last_sha ]]
         then
-             (( $(git diff $(< ~/build-cache/last_sha) ${CIRCLE_SHA1} . | wc -l) > 0 ))
+             (( $(git diff $(< ~/build-cache/last_sha) ${CI_SHA1} . | wc -l) > 0 ))
         else
             (( $(find . -type f -cmin -$age | wc -l) > 0 ))
         fi
@@ -114,13 +114,13 @@ changed() {
 }
 
 undeployed() {
-    if ${forced:-false}
+    if ${forced:=false}
     then
         true
     else
         if [[ -n $CI && -f ~/build-cache/last_deploy_sha ]]
         then
-             (( $(git diff $(< ~/build-cache/last_deploy_sha) ${CIRCLE_SHA1} . | wc -l) > 0 ))
+             (( $(git diff $(< ~/build-cache/last_deploy_sha) ${CI_SHA1} . | wc -l) > 0 ))
         else
             true
         fi
@@ -131,8 +131,8 @@ undeployed() {
 
 
 copy() {
- rsync -tavq $@
-}   
+ rsync -tav $@
+}
 
 ifnewer() {
     if [[ $1 -nt $2 ]]
@@ -143,7 +143,7 @@ ifnewer() {
 }
 
 dirHasChanged() {
-    [[ -n ${PRODUCTION_BUILD} ]] || [[ ! -f ${BUILD_DIR}/.${1} ]] || [[ -n $(find $2 -prune -newer ${BUILD_DIR}/.${1}) ]]
+    [[ -n ${PRODUCTION_BUILD} ]] || [[ ! -f ${BUILD_DIR}/.${1} ]] || [[ -n $(find $2 -newer ${BUILD_DIR}/.${1}) ]]
 }
 
 markDone() {
@@ -168,7 +168,7 @@ s3_deploy() {
 #        aws s3 cp  --cache-control "max-age=0, no-cache, no-store, private" --expires ""    ${DEPLOY_DIR}/redirect-expanded.html s3://${DEPLOY_HOST}/~/${environment}/index.html
 #        aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION} --paths /!/*
     else
-        export DEPLOY_PREFIX="~/${CIRCLE_BRANCH:-local}"
+        export DEPLOY_PREFIX="~/${CI_BRANCH:-local}"
         envsubst < ${build_util_dir}/redirect.html > ${DEPLOY_DIR}/redirect-expanded.html
         aws s3 sync --delete --cache-control "max-age=0, no-cache, no-store, private" --expires "" --exclude "typings/**" --exclude "static/**" --exclude "cdn/**"  ${DEPLOY_DIR}/ s3://${DEPLOY_HOST}/${DEPLOY_PREFIX}/
 #
@@ -195,7 +195,7 @@ s3_deploy() {
 #function routes3() {
 #    aws s3 sync --quiet --delete --cache-control "no-cache" s3://$1/${3}/ s3://$1/previous/
 #    echo ${4} > /tmp/version
-#    echo ${4},${codename:-},${CIRCLE_BUILD_NUM},${CIRCLE_SHA1},${CIRCLE_COMPARE_URL},$(date) > /tmp/build
+#    echo ${4},${codename:-},${CI_BUILD_NUM},${CI_SHA1},${CI_COMPARE_URL},$(date) > /tmp/build
 #    aws s3 cp  /tmp/version s3://$1/${4}/.version
 #    aws s3 cp /tmp/build s3://$1/${4}/.build
 #    aws s3 cp /tmp/version s3://$1/${3}/.stale

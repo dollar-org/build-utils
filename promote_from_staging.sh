@@ -5,14 +5,14 @@ cd $(dirname $0)
 DIR=$(pwd)
 cd -
 
-export CODENAME=$($DIR/codenames/name.sh $CIRCLE_SHA1)
-if [[ ${CIRCLE_BRANCH} == "staging" ]]
+export CODENAME=$($DIR/codenames/name.sh $CI_SHA1)
+if [[ ${CI_BRANCH} == "staging" ]]
 then
-    export RELEASE=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
-    export TAG=${RELEASE:-${CODENAME}-${CIRCLE_BUILD_NUM}}
+    export RELEASE=${RELEASE:-${CODENAME}-${CI_BUILD_NUM}}
+    export TAG=${RELEASE:-${CODENAME}-${CI_BUILD_NUM}}
 else
-    export RELEASE=${RELEASE:-${CIRCLE_BRANCH}}
-    export TAG=${RELEASE}-${CIRCLE_BUILD_NUM}
+    export RELEASE=${RELEASE:-${CI_BRANCH}}
+    export TAG=${RELEASE}-${CI_BUILD_NUM}
 fi
 
 if [ -n "$GIT_EMAIL" ]
@@ -32,7 +32,7 @@ git reset HEAD --hard
 git clean -fd
 
 function badge() {
-echo "[![$3](https://img.shields.io/badge/Status-$1-$2.svg?style=flat)](http://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME)"
+echo "[![$3](https://img.shields.io/badge/Status-$1-$2.svg?style=flat)](http://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME)"
 }
 
 export STATE_SHELVED=$(badge Shelved gray "Shelved")
@@ -47,13 +47,13 @@ export BLURB=$(
 cat <<EOF
 -------
 
-**If you use this project please consider giving us a star on [GitHub](http://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME). Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**
+**If you use this project please consider giving us a star on [GitHub](http://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME). Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**
 
 Please contact us through chat or through GitHub Issues.
 
-[![GitHub Issues](https://img.shields.io/github/issues/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.svg)](https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.svg)](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues)
 
-[![Join the chat at https://gitter.im/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 -------
 
@@ -64,7 +64,7 @@ export FOOTER=$(
 cat <<EOF
 --------
 
-[![GitHub License](https://img.shields.io/github/license/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.svg)](https://raw.githubusercontent.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/master/LICENSE)
+[![GitHub License](https://img.shields.io/github/license/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.svg)](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE)
 
 #Referral Links
 
@@ -78,7 +78,7 @@ This is an open source project, which means that we are giving our time to you f
 
 #Copyright and License
 
-(c) 2015 Sillelien all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/master/LICENSE) for license details of this project. Please visit http://sillelien.com for help and commercial support or raise issues on [GitHub](https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/issues).
+(c) 2015 Sillelien all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE) for license details of this project. Please visit http://sillelien.com for help and commercial support or raise issues on [GitHub](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues).
 
 <div width="100%" align="right">
 <img src='https://da8lb468m8h1w.cloudfront.net/v2/cpanel/8398500-121258714_5-s1-v1.png?palette=1' >
@@ -93,11 +93,11 @@ export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https
 git checkout -f master
 git pull -f -n <<< "Rebasing master"
 git config --global push.default simple
-git branch --set-upstream-to=origin/${CIRCLE_BRANCH} ${CIRCLE_BRANCH}
-git checkout ${CIRCLE_BRANCH}
+git branch --set-upstream-to=origin/${CI_BRANCH} ${CI_BRANCH}
+git checkout ${CI_BRANCH}
 git rebase master
 git checkout master
-git merge ${CIRCLE_BRANCH} -m "Merge from ${CIRCLE_BRANCH}"
+git merge ${CI_BRANCH} -m "Merge from ${CI_BRANCH}"
 
 if [[ -f README.md ]]
 then

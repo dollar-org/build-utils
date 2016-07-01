@@ -8,6 +8,6 @@ cd -
 . $DIR/functions.sh
 
 git push --set-upstream origin master
-git tag ${CODENAME}-${CIRCLE_BUILD_NUM} || :
+git tag ${CODENAME}-${CI_BUILD_NUM} || :
 git push --tags
 git push origin master
