@@ -78,7 +78,7 @@ then
     then
         export RELEASE="${MAJOR_VERSION:-}.${CI_BUILD_NUM}"
     else
-        export RELEASE="$(echo ${BRANCH} | tr '/' '-')-${CI_BUILD_NUM}}"
+        export RELEASE="$(echo ${BRANCH} | tr '/' '-')-${CI_BUILD_NUM}"
     fi
     export RELEASE_NUMBER="${CI_BUILD_NUM}"
     export RELEASE_ID="${CI_SHA1}"
