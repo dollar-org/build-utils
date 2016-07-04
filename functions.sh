@@ -69,7 +69,7 @@ then
 
 fi
 
-export ARTIFACT_DIR=${CI_ARTIFACTS:-.}
+export ARTIFACT_DIR=${CI_ARTIFACTS:=$(pwd)/artifacts}
 
 if [[ -n ${CI:=} ]]
 then
