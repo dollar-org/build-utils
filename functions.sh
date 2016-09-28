@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
-build_util_dir=${BUILD_UTILS_DIR:=deps/build-utils}
+build_util_dir=${BUILD_UTILS_DIR:=.build/build-utils}
 export PRODUCTION_BUILD=
 export BRANCH=${CI_BRANCH:=local}
 if [[ ${BRANCH} == "master" ]]
@@ -73,7 +73,7 @@ export ARTIFACT_DIR=${CI_ARTIFACTS:=$(pwd)/artifacts}
 
 if [[ -n ${CI:=} ]]
 then
-    export CODENAME=$($build_util_dir/codenames/name.sh $CI_SHA1)
+    export CODENAME=$($build_util_dir/codenames/name.sh ${CI_SHA1:=${CI_BUILD_NUM:=1111111111111}})
     if [[ -n $PRODUCTION_BUILD ]]
     then
         export RELEASE="${MAJOR_VERSION:-}.${CI_BUILD_NUM}"
