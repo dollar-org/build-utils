@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
-build_util_dir=${BUILD_UTILS_DIR:-../build-utils}
+build_util_dir=${BUILD_UTILS_DIR:=deps/build-utils}
 export PRODUCTION_BUILD=
 export BRANCH=${CI_BRANCH:=local}
 if [[ ${BRANCH} == "master" ]]
@@ -151,7 +151,7 @@ markDone() {
 }
 
 s3_release() {
-      export DEPLOY_PREFIX="version/${RELEASE_VERSION}"
+     export DEPLOY_PREFIX="version/latest}"
      envsubst < ${build_util_dir}/redirect.html > ${DEPLOY_DIR}/redirect-expanded.html
      aws s3 cp  --cache-control "max-age=0, no-cache, no-store, private" --expires ""    ${DEPLOY_DIR}/redirect-expanded.html s3://${DEPLOY_HOST}/index.html
 }
