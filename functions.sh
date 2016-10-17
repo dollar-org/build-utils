@@ -239,3 +239,11 @@ s3_deploy() {
 #
 #}
 #
+
+
+function baseXencode() {
+  awk 'BEGIN{b=split(ARGV[1],D,"");n=ARGV[2];do{d=int(n/b);i=D[n-b*d+1];r=i r;n=d}while(n!=0);print r}' "$1" "$2"
+}
+function safe64encode() {
+  baseXencode 0123465789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_ "$1"
+}
