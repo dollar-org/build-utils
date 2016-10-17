@@ -4,6 +4,8 @@ export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
 build_util_dir=${BUILD_UTILS_DIR:=.build/build-utils}
 export PRODUCTION_BUILD=
 export BRANCH=${CI_BRANCH:=local}
+export CI_SHA1=$(git log -1 --format="%H")
+
 if [[ ${BRANCH} == "master" ]]
 then
         export PRODUCTION_BUILD=yes
@@ -94,7 +96,6 @@ export release=${RELEASE}
 export RELEASE_VERSION="${RELEASE}"
 export RELEASE_NAME="${CODENAME}"
 export AWS_DEFAULT_REGION=eu-west-1
-
 
 
 
