@@ -250,9 +250,9 @@ function safe64encode() {
 }
 
 function urlencode() {
-    python -c "import sys, urllib as ul;print ul.quote_plus(sys.argv[1])" "$1"
+    python2 -c "import sys, urllib as ul;print ul.quote_plus(sys.argv[1])" "$1"
 }
 
 function urldecode() {
-    python -c "import sys, urllib as ul;print ul.unquote_plus(sys.argv[1])" "$1"
+    python2 -c "import sys, urllib as ul;print ul.unquote_plus(sys.argv[1])" "$1"
 }
