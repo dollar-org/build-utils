@@ -248,3 +248,11 @@ function baseXencode() {
 function safe64encode() {
   baseXencode 0123465789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_ "$1"
 }
+
+function urlencode() {
+    python -c "import sys, urllib as ul;print ul.quote_plus(sys.argv[1])"
+}
+
+function urldecode() {
+    python -c "import sys, urllib as ul;print ul.unquote_plus(sys.argv[1])"
+}

@@ -30,3 +30,4 @@ curl https://sentry.io/api/hooks/release/builtin/106345/8a24068e454450b1689a7119
   -X POST \
   -H 'Content-Type: application/json' \
   -d "{\"version\": \"${RELEASE}\"}"
+
