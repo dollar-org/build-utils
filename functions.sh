@@ -72,7 +72,7 @@ then
 
 fi
 
-export ARTIFACT_DIR=${CI_ARTIFACTS:=$(pwd)/artifacts}
+export ARTIFACT_DIR=${CI_ARTIFACTS:=${CIRCLE_ARTIFACTS:=$(pwd)/artifacts}}
 
 if [[ -n ${CI:=} ]]
 then
