@@ -5,6 +5,7 @@ build_util_dir=${BUILD_UTILS_DIR:=.build/build-utils}
 export PRODUCTION_BUILD=
 export BRANCH=${CI_BRANCH:=local}
 export CI_SHA1=$(git log -1 --format="%H")
+export CI_BUILD_NUM=${CI_BUILD_NUM:=${CIRCLE_BUILD_NUM}}
 
 if [[ ${BRANCH} == "master" ]]
 then
