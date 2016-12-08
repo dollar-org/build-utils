@@ -89,7 +89,7 @@ else
     export RELEASE=local
     export RELEASE_ID=local
     export CODENAME=local
-    export RELEASE_NUMBER=0
+    export RELEASE_NUMBER=$(date +"%s")
 fi
 
 
