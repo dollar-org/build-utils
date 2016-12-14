@@ -33,7 +33,7 @@ curl https://sentry.io/api/hooks/release/builtin/106345/8a24068e454450b1689a7119
 
 if  [[ ${CI_BRANCH} == "master" ]]
 then
-read -d '' payload <<"EOF"
+read -d '' payload <<EOF
 {
   "icon_emoji": ":tada:",
   "text": "Version ${RELEASE} codenamed ${CODENAME} released into live",
