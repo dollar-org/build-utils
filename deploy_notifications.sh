@@ -31,3 +31,22 @@ curl https://sentry.io/api/hooks/release/builtin/106345/8a24068e454450b1689a7119
   -H 'Content-Type: application/json' \
   -d "{\"version\": \"${RELEASE}\"}"
 
+if  [[ ${CI_BRANCH} == "master" ]]
+then
+read -d '' payload <<"EOF"
+{
+  "icon_emoji": ":tada:",
+  "text": "Version ${RELEASE} codenamed ${CODENAME} released into live",
+  "attachments": [
+    {
+      "title": "New Link",
+      "title_link": "https://bizz.vizz.buzz/version/${RELEASE_NUMBER}",
+      "text": "https://bizz.vizz.buzz/version/${RELEASE_NUMBER}",
+      "color": "#4E86A8"
+    }
+  ]
+}
+EOF
+fi
+
+curl -X POST --data-urlencode "payload=$payload" https://chat.vizz.buzz/hooks/3fWh2rxoeuSWWudPq/y5T73Gvvebnee3rprzh2LXhT4QZ8PNecfnAH25ya6FTu7FM9
