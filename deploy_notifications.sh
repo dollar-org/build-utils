@@ -39,7 +39,7 @@ read -d '' payload <<EOF
   "text": "Version ${RELEASE} codenamed ${CODENAME} released into live",
   "attachments": [
     {
-      "title": "New Link",
+      "title": "New Address",
       "title_link": "https://bizz.vizz.buzz/version/${RELEASE_NUMBER}",
       "text": "https://bizz.vizz.buzz/version/${RELEASE_NUMBER}",
       "color": "#4E86A8"
