@@ -39,7 +39,7 @@ read -d '' payload <<EOF
   "text": "Version ${RELEASE} codenamed ${CODENAME} released into live",
   "attachments": [
     {
-      "title": "New Address",
+      "title": "New Release",
       "title_link": "https://bizz.vizz.buzz/version/${RELEASE_NUMBER}",
       "text": "https://bizz.vizz.buzz/version/${RELEASE_NUMBER}",
       "color": "#4E86A8"
@@ -47,6 +47,6 @@ read -d '' payload <<EOF
   ]
 }
 EOF
+curl -X POST --data-urlencode "payload=$payload" https://chat.vizz.buzz/hooks/3fWh2rxoeuSWWudPq/y5T73Gvvebnee3rprzh2LXhT4QZ8PNecfnAH25ya6FTu7FM9
 fi
 
-curl -X POST --data-urlencode "payload=$payload" https://chat.vizz.buzz/hooks/3fWh2rxoeuSWWudPq/y5T73Gvvebnee3rprzh2LXhT4QZ8PNecfnAH25ya6FTu7FM9
