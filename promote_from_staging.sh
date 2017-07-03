@@ -47,7 +47,7 @@ export BLURB=$(
 cat <<EOF
 -------
 
-**If you use this project please consider giving us a star on [GitHub](http://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME). Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**
+**If you use this project please consider giving us a star on [GitHub](http://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME). A
 
 Please contact us through chat or through GitHub Issues.
 
@@ -74,22 +74,20 @@ This is an open source project, which means that we are giving our time to you f
 
 [Low Cost and High Quality Cloud Hosting from Digital Ocean](https://www.digitalocean.com/?refcode=7b4639fc8194) - truly awesome service.
 
-[Excellent Single Page Website Creation and Hosting from Strikingly](http://strk.ly/?uc=kDaE2vgzc3F) - http://sillelien.com uses this.
-
 #Copyright and License
 
-(c) 2015 Sillelien all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE) for license details of this project. Please visit http://sillelien.com for help and commercial support or raise issues on [GitHub](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues).
+(c) 2015-2017 Neil Ellis all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE) for license details of this project. Please visit http://neilellis.me for help and commercial support or raise issues on [GitHub](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues).
 
 <div width="100%" align="right">
-<img src='https://da8lb468m8h1w.cloudfront.net/v2/cpanel/8398500-121258714_5-s1-v1.png?palette=1' >
+<img>
 </div>
 
 EOF
 )
 
 export HEADER=""
+export TUTUM=""
 
-export TUTUM="[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)"
 git checkout -f master
 git pull -f -n <<< "Rebasing master"
 git config --global push.default simple
@@ -105,10 +103,6 @@ then
     git add README.md
 fi
 
-if [ -f tutum.tmpl.yml ]
-then
-    envsubst '${RELEASE}' < tutum.tmpl.yml > tutum.yml
-fi
 
 git push --set-upstream origin master
 git tag ${TAG} || :
