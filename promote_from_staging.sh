@@ -13,11 +13,11 @@ export CI_PROJECT_REPONAME=${CI_PROJECT_REPONAME:-${CIRCLE_PROJECT_REPONAME}}
 export CODENAME=$($DIR/codenames/name.sh $CI_SHA1)
 if [[ ${CI_BRANCH} == "staging" ]]
 then
-    export RELEASE=${RELEASE:-${CODENAME}-${CI_BUILD_NUM}}
-    export TAG=${RELEASE:-${CODENAME}-${CI_BUILD_NUM}}
+    export RELEASE=${RELEASE:-${CI_BUILD_NUM}}
+    export TAG=${RELEASE:-${CI_BUILD_NUM}}
 else
     export RELEASE=${RELEASE:-${CI_BRANCH}}
-    export TAG=${RELEASE}-${CI_BUILD_NUM}
+    export TAG=${RELEASE:-${CI_BUILD_NUM}}
 fi
 
 if [ -n "$GIT_EMAIL" ]
