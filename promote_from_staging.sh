@@ -5,6 +5,11 @@ cd $(dirname $0)
 DIR=$(pwd)
 cd -
 
+export CI_BRANCH=${CI_BRANCH:-${CIRCLE_BRANCH}}
+export CI_BUILD_NUM=${CI_BUILD_NUM:-${CIRCLE_BUILD_NUM}}
+export CI_PROJECT_USERNAME=${CI_PROJECT_USERNAME:-${CIRCLE_PROJECT_USERNAME}}
+export CI_PROJECT_REPONAME=${CI_PROJECT_REPONAME:-${CIRCLE_PROJECT_REPONAME}}
+
 export CODENAME=$($DIR/codenames/name.sh $CI_SHA1)
 if [[ ${CI_BRANCH} == "staging" ]]
 then
