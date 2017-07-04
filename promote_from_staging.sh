@@ -18,10 +18,10 @@ export CODENAME=$($DIR/codenames/name.sh $CI_SHA1)
 if [[ ${CI_BRANCH} == "staging" ]]
 then
     export RELEASE=${RELEASE:-${CI_BUILD_NUM}}
-    export TAG=${RELEASE:-${CI_BUILD_NUM}}
+    export TAG=${RELEASE_NUMBER:-${CI_BUILD_NUM}}
 else
     export RELEASE=${RELEASE:-${CI_BRANCH}}
-    export TAG=${RELEASE:-${CI_BUILD_NUM}}
+    export TAG=${RELEASE_NUMBER:-${CI_BUILD_NUM}}
 fi
 
 if [ -n "$GIT_EMAIL" ]
