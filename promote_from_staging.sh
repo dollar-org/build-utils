@@ -56,14 +56,13 @@ export BLURB=$(
 cat <<EOF
 -------
 
-**If you use this project please consider giving us a star on [GitHub](http://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME). A
+** If you use this project please consider giving us a star on [GitHub](http://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME). **
 
-Please contact us through chat or through GitHub Issues.
+Please contact me through Gitter (chat) or through GitHub Issues.
 
-[![GitHub Issues](https://img.shields.io/github/issues/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.svg)](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.svg)](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues) [![Join the chat at https://gitter.im/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![Join the chat at https://gitter.im/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
+For commercial support please <a href="mailto:hello@neilellis.me">contact me directly</a>.
 -------
 
 EOF
@@ -72,8 +71,6 @@ EOF
 export FOOTER=$(
 cat <<EOF
 --------
-
-[![GitHub License](https://img.shields.io/github/license/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.svg)](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE)
 
 # Referral Links
 
@@ -85,7 +82,11 @@ This is an open source project, which means that we are giving our time to you f
 
 # Copyright and License
 
-(c) 2015-2017 Neil Ellis all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE) for license details of this project. Please visit http://neilellis.me for help and commercial support or raise issues on [GitHub](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues).
+[![GitHub License](https://img.shields.io/github/license/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.svg)](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE)
+
+(c) 2015-2017 Neil Ellis all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE) for license details of this project. Please visit http://neilellis.me for help and raise issues on [GitHub](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues).
+
+For commercial support please <a href="mailto:hello@neilellis.me">contact me directly</a>.
 
 <div width="100%" align="right">
 <img>
@@ -105,9 +106,6 @@ git checkout ${CI_BRANCH}
 git rebase master
 git checkout master
 git merge ${CI_BRANCH} -m "Merge from ${CI_BRANCH}"
-
-
-
 git push --set-upstream origin master
 if [[ -f README.md ]]
 then
