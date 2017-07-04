@@ -111,8 +111,8 @@ then
     git add README.md
 fi
 echo ${RELEASE} > .release
-echo ${RELEASE} ${CODENAME}  > .release.details
-git commit -m "Release ${RELEASE}" || :
+echo ${RELEASE} ${RELEASE_NUMBER:-} ${RELEASE_ID:-} ${CODENAME}  > .release.details
+git commit -m "Release ${RELEASE}  [${RELEASE_NUMBER:-}/${RELEASE_ID:-}] (${CODENAME})" || :
 git tag ${TAG} || :
 git push --tags
 git push origin master
