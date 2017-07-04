@@ -3,8 +3,11 @@
 
 cd $(dirname $0)
 DIR=$(pwd)
-. functions.sh
 cd -
+
+. $DIR/functions.sh
+
+[[ -f env.sh ]] && . env.sh
 
 export CI_BRANCH=${CI_BRANCH:-${CIRCLE_BRANCH}}
 export CI_BUILD_NUM=${CI_BUILD_NUM:-${CIRCLE_BUILD_NUM}}
