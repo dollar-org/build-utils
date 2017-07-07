@@ -84,7 +84,7 @@ This is an open source project, which means that we are giving our time to you f
 
 [![GitHub License](https://img.shields.io/github/license/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.svg)](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE)
 
-(c) 2015-2017 Neil Ellis all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE) for license details of this project. Please visit http://neilellis.me for help and raise issues on [GitHub](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues).
+(c) 2014-2017 Neil Ellis all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/master/LICENSE) for license details of this project. Please visit http://neilellis.me for help and raise issues on [GitHub](https://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME/issues).
 
 For commercial support please <a href="mailto:hello@neilellis.me">contact me directly</a>.
 
@@ -95,7 +95,12 @@ For commercial support please <a href="mailto:hello@neilellis.me">contact me dir
 EOF
 )
 
-export HEADER=""
+export HEADER=$(
+cat <<EOF
+Build Status: [![Circle CI](https://circleci.com/gh/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.png?style=badge)](https://circleci.com/gh/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME)
+
+EOF
+)
 export TUTUM=""
 
 git checkout -f master
