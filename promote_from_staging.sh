@@ -111,6 +111,8 @@ git branch --set-upstream-to=origin/${CI_BRANCH} ${CI_BRANCH}
 git checkout ${CI_BRANCH}
 git rebase master
 git checkout master
+git merge ${CI_BRANCH} -m "Merge from ${CI_BRANCH}"
+git push --set-upstream origin master
 if [[ -f README.md ]]
 then
     envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${TUTUM}' < README.tmpl.md > README.md
@@ -122,7 +124,5 @@ echo ${RELEASE} ${RELEASE_NUMBER} ${RELEASE_ID} ${CODENAME}  > .release.details
 git add .release.details
 git commit -m "Release ${RELEASE}  [${RELEASE_NUMBER:-}/${RELEASE_ID:-}] (${CODENAME})" || :
 git tag ${TAG} || :
-git merge ${CI_BRANCH} -m "Merge from ${CI_BRANCH}"
-git push --set-upstream origin master
 git push --tags
-#git push origin master
+git push origin master
