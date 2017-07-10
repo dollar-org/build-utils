@@ -103,6 +103,14 @@ Build: [![Circle CI](https://circleci.com/gh/$CI_PROJECT_USERNAME/$CI_PROJECT_RE
 
 EOF
 )
+
+export DOWNLOAD=$(
+cat <<EOF
+[ ![Download](https://api.bintray.com/packages/$CI_PROJECT_USERNAME/maven/$CI_PROJECT_REPONAME/images/download.svg) ](https://bintray.com/$CI_PROJECT_USERNAME/maven/$CI_PROJECT_REPONAME/_latestVersion)
+
+EOF
+)
+
 export TUTUM=""
 
 git checkout -f master
@@ -116,7 +124,7 @@ git merge ${CI_BRANCH} -m "Merge from ${CI_BRANCH}"
 #git push --set-upstream origin master
 if [[ -f README.tmpl.md  ]]
 then
-    envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${TUTUM}' < README.tmpl.md > README.md
+    envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${DOWNLOAD}' < README.tmpl.md > README.md
     git add README.md
 fi
 echo ${RELEASE} > .release
