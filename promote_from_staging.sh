@@ -97,7 +97,8 @@ EOF
 
 export HEADER=$(
 cat <<EOF
-Build Status: [![Circle CI](https://circleci.com/gh/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.png?style=badge)](https://circleci.com/gh/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME)
+Build: [![Circle CI](https://circleci.com/gh/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME.png?style=badge)](https://circleci.com/gh/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME)
+
 [ ![Download](https://api.bintray.com/packages/$CI_PROJECT_USERNAME/maven/$CI_PROJECT_REPONAME/images/download.svg) ](https://bintray.com/$CI_PROJECT_USERNAME/maven/$CI_PROJECT_REPONAME/_latestVersion)
 
 EOF
