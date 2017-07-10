@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -eux
 cd $(dirname $0)
 DIR=$(pwd)
 cd -
