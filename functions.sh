@@ -76,7 +76,7 @@ export ARTIFACT_DIR=${CI_ARTIFACTS:=${CIRCLE_ARTIFACTS:=$(pwd)/artifacts}}
 
 if [[ -n ${CI:=} ]]
 then
-    export CODENAME=$($build_util_dir/codenames/name.sh ${CI_SHA1:=${CI_BUILD_NUM:=1111111111111}})
+    export CODENAME=$($build_util_dir/codenames/name.sh ${CI_SHA1:=${CI_BUILD_NUM:=1111111111111}} names)
     if [[ -n ${MAJOR_VERSION:=} ]]
     then
         export RELEASE="${MAJOR_VERSION:-}.${CI_BUILD_NUM}"
