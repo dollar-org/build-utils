@@ -10,7 +10,16 @@
             <username>neilellis</username>
             <password>${BINTRAY_API_KEY}</password>
         </server>
-
+        <server>
+            <id>dollar-s3-release-repo</id>
+            <username>${AWS_ACCESS_KEY_ID}</username>
+            <password>${AWS_SECRET_KEY}</password>
+        </server>
+        <server>
+            <id>dollar-s3-snapshot-repo</id>
+            <username>${AWS_ACCESS_KEY_ID}</username>
+            <passphrase>${AWS_SECRET_KEY}</passphrase>
+        </server>
     </servers>
 
 </settings>
