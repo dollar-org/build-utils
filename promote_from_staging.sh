@@ -1,5 +1,8 @@
 #!/bin/bash -ex
-
+if [[ -n $CI_LOCAL ]]
+then
+    exit 0
+fi
 
 cd $(dirname $0)
 DIR=$(pwd)
