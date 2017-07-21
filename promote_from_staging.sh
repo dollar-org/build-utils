@@ -120,7 +120,7 @@ git branch --set-upstream-to=origin/${CI_BRANCH} ${CI_BRANCH}
 git checkout ${CI_BRANCH}
 git rebase master
 git checkout master
-git merge ${CI_BRANCH} -m "[skip ci] Merge from ${CI_BRANCH}"
+git merge ${CI_BRANCH} -m "Merge from ${CI_BRANCH}"
 #git push --set-upstream origin master
 if [[ -f README.tmpl.md  ]]
 then
