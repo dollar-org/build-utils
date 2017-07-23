@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+cd $(dirname $0)
+DIR=$(pwd)
+cd -
 
 export PATH=$PATH:/usr/local/Cellar/gettext/0.19.6/bin/
 build_util_dir=${BUILD_UTILS_DIR:=.build/build-utils}
@@ -73,7 +76,7 @@ then
 fi
 
 export ARTIFACT_DIR=${CI_ARTIFACTS:=${CIRCLE_ARTIFACTS:=$(pwd)/artifacts}}
-export CODENAME=$($build_util_dir/codenames/name.sh ${CI_SHA1:=${CI_BUILD_NUM:=1111111111111}} arcane_jobs)
+export CODENAME=$($DIR/codenames/name.sh ${CI_SHA1:=${CI_BUILD_NUM:=1111111111111}} arcane_jobs)
 
 if [[ -n ${CI:=} ]]
 then

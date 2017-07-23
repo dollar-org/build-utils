@@ -4,7 +4,7 @@ jobs:
         - image: sillelien/circleci-dollar-build-image
 
       environment:
-        MAJOR_VERSION: 0.0
+        MAJOR_VERSION: 0.1
         MAVEN_OPTS: "-Xmx1g -DbuildNumber=${CIRCLE_BUILD_NUM}  "
         TZ: "/usr/share/zoneinfo/Europe/London"
 
@@ -22,3 +22,13 @@ jobs:
             name: init
             command: . functions.sh
 
+
+        - run:
+            name: test
+            command:  ./test.sh  && echo "PASSED"
+
+        - deploy:
+            command: |
+              if [ "${CIRCLE_BRANCH}" == "staging" ]; then
+                      ~/build-utils/promote_from_staging.sh
+              fi
