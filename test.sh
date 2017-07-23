@@ -4,6 +4,6 @@ set -eux
 CODENAME_1=$(codenames/name.sh 1234567890123456 arcane_jobs)
 CODENAME_2=$(codenames/name.sh 1234567890123456 names)
 CODENAME_3=$(codenames/name.sh 1234567890123456 shortwords)
-[[ $CODENAME_1 = "victorious-castor-of-tregeiriog" ]]
+[[ $CODENAME_1 = "victorious-lokeer-of-tregeiriog" ]]
 [[ $CODENAME_2 = "toinette-nicholas-nessim" ]]
 [[ $CODENAME_3 = "purely-gleety-barre" ]]
