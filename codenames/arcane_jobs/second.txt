@@ -1,0 +1,130 @@
+aquarius -of
+aurifaber-of
+avenator -of
+barker-of
+baxter-of
+belhoste-of
+belleyetere-of
+bowyer-of
+brasiler-of
+burneman-of
+cancellarius-of
+cardmaker-of
+carnifex-of
+carpentarius-of
+chaloner-of
+chapman-of
+chirugion-of
+cissor-of
+clericus-of
+cocus -of
+combere-of
+corvisor -of
+cotiler-of
+cuhreur -of
+cuper-of
+dexter-of
+dubbere-of
+dudder-of
+daunsel-of
+dysshere-of
+elymaker-of
+faber-of
+ferur -of
+fisher -of
+flauner-of
+fleshewer-of
+fletcher-of
+forestarius-of
+frereman-of
+fuller-of
+furber -of
+furner-of
+garcifer -of
+garlekmonger-of
+glassewryght-of
+gynour-of
+hamberghmaker -of
+harper-of
+hetheleder-of
+hosteler-of
+husbandman-of
+kepegest-of
+latouner-of
+limner-of
+lokeer-of
+lorimer-of
+macun-of
+marescallus-of
+medicus-of
+mercator-of
+molendinarius-of
+mustarder-of
+nedder-of
+palmer-of
+paneler-of
+pannarius-of
+pannebeter-of
+pardoner-of
+parmentor-of
+parcheminer-of
+pattenmaker-of
+pelliparius (peltarius-of
+perukemaker-of
+pictor-of
+pinder-of
+piscarius-of
+piscator-of
+pistor-of
+plantifene .-of
+plomer-of
+pynner-of
+roper-of
+rotarius-of
+safernman-of
+samitere -of
+sauntere-of
+sausere-of
+seinter-of
+seler -of
+serviens-of
+servus-of
+sherman -of
+shether-of
+sifker-of
+sissor -of
+sleymaker-of
+soper-of
+spittleman-of
+spicer-of
+spurrier-of
+stabler-of
+stasyon -of
+sugarer-of
+sumner-of
+sutor-of
+tabernarius-of
+tannator-of
+teinter-of
+textor-of
+tinctor-of
+upholder-of
+vaginarius, sheather-of
+venator -of
+vintner-of
+walker -of
+webster-of
+whittawer-of
+yeoman-of
+bever-of
+blockmaker-of
+castor-of
+felmonger-of
+nailor-of
+sempster-of
+sil kmaker spinster-of
+silkmaker throster-of
+simpler-of
+swordcutter-of
+vineroon-of
+whitesmith
