@@ -1,0 +1,24 @@
+jobs:
+    build:
+      docker:
+        - image: sillelien/circleci-dollar-build-image
+
+      environment:
+        MAJOR_VERSION: 0.0
+        MAVEN_OPTS: "-Xmx1g -DbuildNumber=${CIRCLE_BUILD_NUM}  "
+        TZ: "/usr/share/zoneinfo/Europe/London"
+
+      working_directory: ~/build-utils-checkout
+
+      branches:
+        ignore:
+          - gh-pages
+
+      steps:
+
+        - checkout
+
+        - run:
+            name: init
+            command: . functions.sh
+
