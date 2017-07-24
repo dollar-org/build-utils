@@ -86,10 +86,10 @@ abercwmboi
 abercych
 abercynon
 aberdalgie
-aberdar_
-aberdare_
+aberdar
+aberdare
 aberdaron
-aberdaughleddau_
+aberdaughleddau
 aberdeen
 aberdesach
 aberdour
@@ -106,16 +106,16 @@ aberford
 aberfoyle
 abergarw
 abergarwed
-abergavenny_
+abergavenny
 abergele
 abergorlech
-abergwaun_
+abergwaun
 abergwesyn
 abergwili
 abergwynfi
 abergwyngregyn
 abergynolwyn
-aberhonddu_
+aberhonddu
 aberhosan
 aberkenfig
 aberlady
@@ -128,24 +128,24 @@ abermule
 abernant
 abernethy
 abernyte
-aberpennar_
+aberpennar
 aberporth
 abersoch
 abersychan
-abertawe_
-aberteifi_
+abertawe
+aberteifi
 aberthin
-abertillery_
+abertillery
 abertridwr
 abertrinant
-abertyleri_
+abertyleri
 abertysswg
 aberuthven
 aberyscir
 aberystwyth
 abhain_ghlas
 abhain_ghleann_lubharnadeal
-abhain_leataidh_
+abhain_leataidh
 abhain_liundale
 abhain_mhor
 abhain_na_cuile
@@ -816,7 +816,7 @@ alne_end
 alne_hills
 alne_station
 alness
-alness_
+alness
 alnessferry
 alnham
 alnmouth
@@ -924,7 +924,7 @@ amington
 amisfield
 amlwch
 amlwch_port
-ammanford_
+ammanford
 ammerham
 amotherby
 ampfield
@@ -1120,7 +1120,7 @@ arabella
 araglen
 araglin
 aran_islands
-arberth_
+arberth
 arbirlot
 arboe
 arborfield
@@ -1741,7 +1741,7 @@ avening
 avening_green
 averham
 avernish
-averon_
+averon
 avery_hill
 aveton_gifford
 avich
@@ -1822,7 +1822,7 @@ babraham
 babworth
 bac
 bac_beag
-bac_mor_
+bac_mor
 bach_y_gwreiddyn
 bachau
 bache
@@ -1900,9 +1900,9 @@ badsworth
 badwell_ash
 badwell_green
 badworthy
-bae_cinmel_
-bae_colwyn_
-bae_penrhyn_
+bae_cinmel
+bae_colwyn
+bae_penrhyn
 baffins
 bag_enderby
 bagber
@@ -2140,7 +2140,7 @@ ballingdon
 ballingdon_bottom
 ballingeary
 ballinger_bottom
-ballinger_bottom_
+ballinger_bottom
 ballinger_common
 ballingham
 ballingham_hill
@@ -2271,7 +2271,7 @@ ballyforan
 ballyfore
 ballygalley
 ballygar
-ballygar_
+ballygar
 ballygarran
 ballygarrett
 ballygarries
@@ -2559,9 +2559,9 @@ bandrake_head
 banff
 bangor
 bangor_erris
-bangor_on_dee_
+bangor_on_dee
 bangor_teifi
-bangor_is_y_coed_
+bangor_is_y_coed
 bangors
 banham
 bank
@@ -2673,8 +2673,8 @@ barfrestone
 bargarran
 bargate
 bargeddie
-bargod_
-bargoed_
+bargod
+bargoed
 bargrennan
 barham
 barharrow
@@ -2813,7 +2813,7 @@ barrets_green
 barrettstown
 barrhead
 barrhill
-barri_
+barri
 barrigone
 barrington
 barringtonsbridge
@@ -2848,7 +2848,7 @@ barrowhill
 barrowmore_estate
 barrows_green
 barry
-barry_
+barry
 barry_dock
 barry_island
 barsby
@@ -3979,8 +3979,8 @@ black_tar
 black_torrington
 black_vein
 black_water
-black_water_
-black_water_of_dee_
+black_water
+black_water_of_dee
 blacka_burn
 blackadder_water
 blackawton
@@ -4071,7 +4071,7 @@ blackwatertown
 blackweir
 blackwell
 blackwood
-blackwood_
+blackwood
 blacon
 bladbean
 blades
@@ -4461,7 +4461,7 @@ bonsall
 bonson
 bont_dolgadfan
 bont_fawr
-bont_goch_
+bont_goch
 bont_newydd
 bontddu
 bonthorpe
@@ -4733,7 +4733,7 @@ bowes_park
 bowgreave
 bowgreen
 bowhill
-bowhousebog_
+bowhousebog
 bowismiln
 bowithick
 bowkers_green
@@ -4821,7 +4821,7 @@ brackenfield
 brackenhall
 brackenlands
 brackenthwaite
-brackla_
+brackla
 bracklesham
 brackley
 bracknagh
@@ -4915,7 +4915,7 @@ brafield_on_the_green
 bragar
 bragbury_end
 bragenham
-bragle_
+bragle
 brahalish
 braichmelyn
 braichyfedw
@@ -5096,7 +5096,7 @@ breck_of_cruan
 breckles
 breckrey
 brecks
-brecon_
+brecon
 brecon_beacons
 bredbury
 bredbury_green
@@ -5230,7 +5230,7 @@ bridgemary
 bridgemere
 bridgemont
 bridgend
-bridgend_
+bridgend
 bridgend_of_lintrathen
 bridgeness
 bridgerule
@@ -5786,7 +5786,7 @@ brynamman
 brynawel
 brynberian
 brynbryddan
-brynbuga_
+brynbuga
 bryncae
 bryncethin
 bryncir
@@ -5881,7 +5881,7 @@ bucklerheads
 bucklers_hard
 bucklesham
 buckley
-buckley_
+buckley
 buckley_green
 buckley_hill
 bucklow_hill
@@ -5930,7 +5930,7 @@ bugthorpe
 building_end
 buildwas
 builth_road
-builth_wells_
+builth_wells
 bulbourne
 bulbridge
 bulby
@@ -5943,7 +5943,7 @@ bulkeley
 bulkeley_hall
 bulkington
 bulkworthy
-bull_bay_
+bull_bay
 bull_hill
 bull_point
 bulls_green
@@ -6054,7 +6054,7 @@ burgh_le_marsh
 burgh_muir
 burgh_next_aylsham
 burgh_on_bain
-burgh_st_margaret_
+burgh_st_margaret
 burgh_st_peter
 burgh_stubbs
 burghclere
@@ -6233,7 +6233,7 @@ burrswood
 burry
 burry_green
 burry_pill
-burry_port_
+burry_port
 burscott
 burscough
 burscough_bridge
@@ -6365,7 +6365,7 @@ butley_town
 butlocks_heath
 butt_green
 butt_lane
-butt_of_lewis_
+butt_of_lewis
 butt_yeats
 butts_green
 butter_bank
@@ -6399,7 +6399,7 @@ buxley
 buxted
 buxton
 buxworth
-bwcle_
+bwcle
 bwlch
 bwlch_derwin
 bwlch_llan
@@ -6497,21 +6497,21 @@ caer_farchell
 caerau
 caerau_park
 caerdeon
-caerdydd_
+caerdydd
 caerfanell
-caerffil_
-caerfyrddin_
+caerffil
+caerfyrddin
 caergeiliog
 caergwrle
-caergybi_
+caergybi
 caerhendy
 caerhun
-caerleon_
-caerllion_
+caerleon
+caerllion
 caermead
 caermeini
 caernarfon
-caerphilly_
+caerphilly
 caersws
 caerwedros
 caerwent
@@ -6672,7 +6672,7 @@ calverton
 calvine
 calvo
 cam
-cam_
+cam
 cam_loch
 camaghael
 camas_luinie
@@ -6882,8 +6882,8 @@ cardenden
 cardeston
 cardew
 cardewlees
-cardiff_
-cardigan_
+cardiff
+cardigan
 cardigan_island
 cardinals_green
 cardington
@@ -6959,7 +6959,7 @@ carlton_on_trent
 carluddon
 carluke
 carlyon_bay
-carmarthen_
+carmarthen
 carmel
 carmel_head
 carmichael
@@ -7148,7 +7148,7 @@ cary
 cary_fitzpaine
 carzield
 carzise
-cas_gwent_
+cas_gwent
 cascob
 cashel
 cashel_bay
@@ -7158,7 +7158,7 @@ cashla
 cashlie
 cashmoor
 caskieberran
-casnewydd_
+casnewydd
 cassagh
 cassey_compton
 cassington
@@ -7166,7 +7166,7 @@ cassley
 cassop
 castallack
 castell
-castell_nedd_
+castell_nedd
 castell_y_bwch
 castell_y_rhingyll
 casterton
@@ -7411,7 +7411,7 @@ cearsiadair
 cecilstown
 cefn
 cefn_berain
-cefn_bychan_
+cefn_bychan
 cefn_canol
 cefn_coch
 cefn_cribwr
@@ -7442,8 +7442,8 @@ cefneithin
 cefni
 cefni_reservoir
 cefnpennar
-cegidfa_
-ceinewydd_
+cegidfa
+ceinewydd
 ceinws
 ceiriog
 ceirw
@@ -7509,7 +7509,7 @@ chainhurst
 chalbury
 chalbury_common
 chaldon
-chaldon_herring_
+chaldon_herring
 chale
 chale_green
 chalfont_common
@@ -7779,7 +7779,7 @@ chemistry
 cheney_longville
 chenhalls
 chenies
-chepstow_
+chepstow
 chequerbent
 chequerfield
 chequers_corner
@@ -7788,7 +7788,7 @@ cherhill
 cherington
 cheristow
 cheriton
-cheriton_
+cheriton
 cheriton_bishop
 cheriton_cross
 cheriton_fitzpaine
@@ -8123,7 +8123,7 @@ chute_standen
 chweffordd
 chwefru
 chwilog
-chwitffordd_
+chwitffordd
 chyandour
 chyanvounder
 chycoose
@@ -8767,14 +8767,14 @@ codsall
 codsall_wood
 codsend
 coed_cwnwr
-coed_duon_
+coed_duon
 coed_eva
 coed_mawr
 coed_morgan
 coed_y_garth
 coed_y_go
 coed_ystumgwern
-coed_llai_
+coed_llai
 coed_talon
 coed_y_bryn
 coed_y_caerau
@@ -9016,7 +9016,7 @@ colwinston
 colworth
 colworth_ho
 colwyn
-colwyn_bay_
+colwyn_bay
 colyford
 colyton
 combe
@@ -9215,7 +9215,7 @@ coolross
 coolsallagh
 coolshaghtena
 coomb_hill
-coomb_islands_
+coomb_islands
 coombe
 coombe_bissett
 coombe_dingle
@@ -9275,7 +9275,7 @@ coppull
 coppull_moor
 copsale
 copse_hill
-copshaw_holm_
+copshaw_holm
 copster_green
 copster_hill
 copston_magna
@@ -9575,7 +9575,7 @@ cowbeech
 cowbeech_hill
 cowbit
 cowbridge
-cowbridge_
+cowbridge
 cowcliffe
 cowden
 cowdenbeath
@@ -9910,7 +9910,7 @@ cridling_stubbs
 cridmore
 criech
 crieff
-criftins_
+criftins
 criggan
 criggion
 crigglestone
@@ -9922,7 +9922,7 @@ crimdon_park
 crimond
 crimonmogate
 crimp
-crimple_beck_
+crimple_beck
 crimplesham
 crimscote
 crinah_canal
@@ -9961,7 +9961,7 @@ crockernwell
 crockers
 crockerton
 crockerton_green
-crocketford_
+crocketford
 crockets_town
 crockey_hill
 crockham_heath
@@ -9981,7 +9981,7 @@ croesau_bach
 croeserw
 croesor
 croespenmaen
-croeswallt_
+croeswallt
 croesyceiliog
 croesyceilog
 croesywaun
@@ -10539,7 +10539,7 @@ cwmystwyth
 cwrt
 cwrt_y_cadno
 cwrtnewydd
-cydweli_
+cydweli
 cyffylliog
 cymau
 cymdda
@@ -10583,7 +10583,7 @@ daill
 dailly
 daingean
 dainton
-dairsie_
+dairsie
 daisy_green
 daisy_hill
 daisy_nook
@@ -10875,7 +10875,7 @@ dedham_heath
 dedridge
 dedworth
 dee
-dee_
+dee
 deebank
 deene
 deenethorpe
@@ -10924,7 +10924,7 @@ demelza
 den_of_lindores
 denaby_main
 denbeath
-denbigh_
+denbigh
 denbury
 denby
 denby_bottles
@@ -11060,7 +11060,7 @@ devauden
 devenish
 deveral
 deveron
-devils_bridge_
+devils_bridge
 devils_water
 devitts_green
 devizes
@@ -11132,8 +11132,8 @@ dinas_head
 dinas_mawr
 dinas_powis
 dinas_mawddwy
-dinbych_
-dinbych_y_pysgod_
+dinbych
+dinbych_y_pysgod
 dinckley
 dinder
 dinedor
@@ -11202,7 +11202,7 @@ dobcross
 dobs_hill
 dobsons_bridge
 dobwalls
-doc_penfro_
+doc_penfro
 doccombe
 dochart
 dochgarroch
@@ -11739,7 +11739,7 @@ duddon_bridge
 duddon_common
 dudleston
 dudleston_grove
-dudleston_heath_
+dudleston_heath
 dudley
 dudley_hill
 dudley_port
@@ -12027,7 +12027,7 @@ duryard
 duston
 dutch_river
 dutch_village
-dutchmans_cap_
+dutchmans_cap
 duthil
 dutlas
 duton_hill
@@ -12048,7 +12048,7 @@ dye_house
 dyers_common
 dyers_green
 dyffryn
-dyffryn_
+dyffryn
 dyffryn_ardudwy
 dyffryn_cellwen
 dyffryn_bern
@@ -12199,7 +12199,7 @@ east_butterwick
 east_calder
 east_carleton
 east_carlton
-east_chaldon_
+east_chaldon
 east_challow
 east_charleton
 east_chelborough
@@ -12780,7 +12780,7 @@ eilean_garave
 eilean_ghaoideamal
 eilean_hoan
 eilean_horrisdale
-eilean_iarmain_
+eilean_iarmain
 eilean_ighe
 eilean_imersay
 eilean_iosal
@@ -12836,7 +12836,7 @@ eldon_lane
 eldroth
 eldwick
 elemore_vale
-elerch_
+elerch
 elford
 elford_closes
 elgin
@@ -13616,7 +13616,7 @@ fenton_low
 fenton_pits
 fentonadle
 fenwick
-feochan_mhor_
+feochan_mhor
 feock
 feohanagh
 feoramore
@@ -13835,7 +13835,7 @@ fisherton
 fisherton_de_la_mere
 fisherwick
 fishery
-fishguard_
+fishguard
 fishlake
 fishleigh
 fishleigh_castle
@@ -13933,7 +13933,7 @@ fleetlands
 fleets
 fleetville
 fleetwood
-fleggburgh_
+fleggburgh
 fleisirin
 fleming_field
 flemings
@@ -13953,7 +13953,7 @@ flexbury
 flexford
 flimby
 flimwell
-flint_
+flint
 flint_cross
 flint_hill
 flint_mountain
@@ -14176,7 +14176,7 @@ forton_heath
 fortrie
 fortrose
 fortuneswell
-forty_foot_
+forty_foot
 forty_green
 forty_hill
 forward_green
@@ -14633,7 +14633,7 @@ gallows_green
 gallows_inn
 gallowsgreen
 gallowstree_common
-gallt_melyd_
+gallt_melyd
 gallt_y_foel
 galltair
 galltegfa
@@ -15154,7 +15154,7 @@ gleiniant
 glem
 glemsford
 glen
-glen_albyn_
+glen_albyn
 glen_auldyn
 glen_bernisdale
 glen_branter
@@ -15163,7 +15163,7 @@ glen_golly_river
 glen_heysdal
 glen_lochsie_burn
 glen_mona
-glen_mor_
+glen_mor
 glen_of_imail
 glen_of_newmill
 glen_ouirn_river
@@ -15182,7 +15182,7 @@ glenamoy
 glenancross
 glenard
 glenariff
-glenariff_
+glenariff
 glenarm
 glenavy
 glenbarr
@@ -15453,7 +15453,7 @@ goodshaw
 goodshaw_chapel
 goodshaw_fold
 goodstone
-goodwick_
+goodwick
 goodworth_clatford
 goodyers_end
 goodyhills
@@ -16048,7 +16048,7 @@ greendykes
 greenend
 greenfaulds
 greenfield
-greenfield_
+greenfield
 greenfold
 greenfoot
 greenford
@@ -16116,7 +16116,7 @@ greenwoods
 greeny
 greep
 greet
-greeta_river_
+greeta_river
 greete
 greetham
 greetland
@@ -16310,7 +16310,7 @@ guildtown
 guildy
 guilford
 guilsborough
-guilsfield_
+guilsfield
 guilsfield_brook
 guilthwaite
 guilton
@@ -16574,7 +16574,7 @@ halifax
 halkburn
 halket
 halkirk
-halkyn_
+halkyn
 halkyn_mountain
 hall_bower
 hall_broom
@@ -17166,7 +17166,7 @@ haven
 haven_bank
 havenstreet
 havercroft
-haverfordwest_
+haverfordwest
 haverhill
 haverigg
 havering_atte_bower
@@ -17176,7 +17176,7 @@ haverton_hill
 haviker_street
 havyatt
 havyatt_green
-hawarden_
+hawarden
 hawbridge
 hawbush_green
 hawcoat
@@ -17417,7 +17417,7 @@ hebden
 hebden_bridge
 hebden_green
 hebing_end
-hebrides_
+hebrides
 hebron
 heck
 heckdyke
@@ -17459,7 +17459,7 @@ heightington
 heights
 heights_of_kinlochewe
 heirhill
-heisker_
+heisker
 heiton
 helbeck
 hele
@@ -17509,7 +17509,7 @@ helston_water
 helstone
 helton
 helwith_bridge
-helygain_
+helygain
 hem_heath
 hemblington
 hemblington_corner
@@ -18180,7 +18180,7 @@ hirn
 hirnant
 hirst
 hirst_courtney
-hirta_
+hirta
 hirwaen
 hirwaun
 hirwaun_common
@@ -18483,14 +18483,14 @@ holybourne
 holycross
 holyfield
 holyford
-holyhead_
+holyhead
 holylee
 holymoorside
 holyport
 holystone
 holytown
 holywell
-holywell_
+holywell
 holywell_green
 holywell_lake
 holywell_row
@@ -18571,7 +18571,7 @@ hooton_roberts
 hop_pole
 hopcrofts_holt
 hope
-hope_
+hope
 hope_bagot
 hope_bowdler
 hope_end_green
@@ -19052,7 +19052,7 @@ huyton
 huyton_park
 huyton_quarry
 huyton_with_roby
-hwlffordd_
+hwlffordd
 hycemoor
 hyde
 hyde_chase
@@ -19174,7 +19174,7 @@ inch_kenneth
 inchbare
 inchbeg
 inchberry
-inchbraoch_
+inchbraoch
 inchbrook
 inchcailloch
 inchconnachan
@@ -19438,7 +19438,7 @@ isle_of_whithorn
 isle_of_wight
 isle_ristol
 isleham
-isleornsay_
+isleornsay
 isles_of_scilly_49.92n_06.29w_sv917119
 islesteps
 isleworth
@@ -19476,7 +19476,7 @@ ivy_todd
 ivybridge
 ivychurch
 iwade
-iwerne_courtney_
+iwerne_courtney
 iwerne_minster
 iwood
 ixworth
@@ -19686,7 +19686,7 @@ kelston
 keltie_water
 keltneyburn
 kelton
-kelton_hil_
+kelton_hil
 kelty
 kelty_water
 keltybridge
@@ -19906,7 +19906,7 @@ kidlington
 kidmore_end
 kidnal
 kidsgrove
-kidwelly_
+kidwelly
 kiel_crofts
 kielder
 kielder_burn
@@ -20522,7 +20522,7 @@ kinlochmore
 kinloid
 kinloss
 kinlough
-kinmel_bay_
+kinmel_bay
 kinmuck
 kinmylies
 kinnadie
@@ -20572,7 +20572,7 @@ kip_hill
 kiplin
 kippax
 kippen
-kippford_
+kippford
 kippilaw
 kippilaw_mains
 kippings_cross
@@ -20708,7 +20708,7 @@ kirkton_of_durris
 kirkton_of_glenbuchat
 kirkton_of_glenisla
 kirkton_of_kingoldrum
-kirkton_of_largo_
+kirkton_of_largo
 kirkton_of_lethendy
 kirkton_of_lude
 kirkton_of_maryculter
@@ -20811,7 +20811,7 @@ knightcott
 knightley
 knightley_dale
 knighton
-knighton_
+knighton
 knighton_fields
 knighton_on_teme
 knightor
@@ -21428,7 +21428,7 @@ laytown
 lazenby
 lazonby
 lea
-lea_
+lea
 lea_bridge
 lea_by_backford
 lea_end
@@ -21528,7 +21528,7 @@ ledston_luck
 ledstone
 ledwell
 lee
-lee_
+lee
 lee_bank
 lee_brockhurst
 lee_chapel
@@ -21563,7 +21563,7 @@ leenane
 leenaun
 lees
 leesthorpe
-leeswood_
+leeswood
 leetown
 leftwich
 legan
@@ -21696,7 +21696,7 @@ lettermorar
 lettermore
 letters
 letterston
-lettie_river_
+lettie_river
 letton
 letton_green
 letty_brongu
@@ -21952,7 +21952,7 @@ liphook
 lipley
 lippitts_hill
 lipyeate
-liquo_
+liquo
 lisaskea
 lisbellaw
 lisburn
@@ -22035,7 +22035,7 @@ little_almshoe
 little_alne
 little_altcar
 little_ann
-little_ansty_
+little_ansty
 little_arowry
 little_asby
 little_ashley
@@ -22454,7 +22454,7 @@ llaethdy
 llaingoch
 llampha
 llan_dafal
-llan_eurgain_
+llan_eurgain
 llan_mill
 llan_non
 llan_y_pwll
@@ -22463,7 +22463,7 @@ llanaelhaearn
 llanafan
 llanafan_fawr
 llanallgo
-llanandras_
+llanandras
 llananno
 llanarmon
 llanarmon_dyffryn_ceiriog
@@ -22545,17 +22545,17 @@ llandilo
 llandilo_yr_ynys
 llandinam
 llandissilio
-llandochau_
+llandochau
 llandogo
 llandough
-llandough_
-llandovery_
+llandough
+llandovery
 llandow
 llandre
 llandrillo
 llandrillo_yn_rhos
-llandrindod_
-llandrindod_wells_
+llandrindod
+llandrindod_wells
 llandrinio
 llandruidion
 llandudno
@@ -22585,7 +22585,7 @@ llanelltyd
 llanelly
 llanelly_hill
 llanelwedd
-llanelwy_
+llanelwy
 llanenddwyn
 llanengan
 llanerch
@@ -22610,7 +22610,7 @@ llanfair_pwllgwyngyll
 llanfair_talhaiarn
 llanfair_waterdine
 llanfair_nant_gwyn
-llanfair_ym_muallt_
+llanfair_ym_muallt
 llanfairfechan
 llanfairyneubwll
 llanfairynghornwy
@@ -22812,7 +22812,7 @@ llanychaer
 llanycil
 llanyfaelog
 llanymawddwy
-llanymddyfri_
+llanymddyfri
 llanymynech
 llanynghenedl
 llanynys
@@ -22832,7 +22832,7 @@ llechryd
 llechwedd
 lledrod
 llettyrychen
-lleyn_peninsula_
+lleyn_peninsula
 llidiardau
 llidiart_y_parc
 llithfaen
@@ -23700,7 +23700,7 @@ lower_whitley
 lower_wick
 lower_wield
 lower_willingdon
-lower_winchendon_
+lower_winchendon
 lower_withington
 lower_wolverton
 lower_woodend
@@ -24058,7 +24058,7 @@ maes_llyn
 maes_pennant
 maes_bangor
 maes_glas
-maes_glas_
+maes_glas
 maes_y_dre
 maesbrook
 maesbury
@@ -24333,8 +24333,8 @@ marholm
 marian
 marian_cwm
 marian_glas
-marian_y_de_
-marian_y_mor_
+marian_y_de
+marian_y_mor
 mariandyrys
 mariansleigh
 marine_town
@@ -24736,7 +24736,7 @@ melcombe_regis
 meldon
 meldreth
 melfort
-meliden_
+meliden
 melin_caiach
 melin_y_coed
 melin_y_wig
@@ -24787,7 +24787,7 @@ memus
 mena
 menadarva
 menagissey
-menai_bridge_
+menai_bridge
 mendham
 mendip_hills
 mendlesham
@@ -25104,7 +25104,7 @@ milesmark
 milestone
 milfield
 milford
-milford_haven_
+milford_haven
 milford_on_sea
 milkhouse_water
 milkieston
@@ -25374,7 +25374,7 @@ moira
 moity
 mol_chlach
 molash
-mold_
+mold
 moldgreen
 mole
 molehill_green
@@ -25393,7 +25393,7 @@ monaincha_bog
 monalour
 monamolin
 monamraher
-monarch_islands_
+monarch_islands
 monard
 monaseed
 monaster
@@ -25477,7 +25477,7 @@ monkwood
 monkwood_green
 monmarsh
 monmore_green
-monmouth_
+monmouth
 monmouth_cap
 monmouthshire_and_brecon_canal
 monnington_on_wye
@@ -25552,7 +25552,7 @@ moorhole
 moorhouse
 moorhouse_bank
 moorhouses
-moorland_
+moorland
 moorledge
 moorlinch
 moors,_the
@@ -25765,7 +25765,7 @@ mount_vernon
 mount_wise
 mountain
 mountain_air
-mountain_ash_
+mountain_ash
 mountain_bower
 mountain_cross
 mountain_street
@@ -26108,7 +26108,7 @@ nant_bargod
 nant_bran
 nant_mawr
 nant_peris
-nant_peris_
+nant_peris
 nant_wythan
 nant_y_caws
 nant_y_flint
@@ -26154,7 +26154,7 @@ napton_on_the_hill
 nar
 narachan_burn
 naran
-narberth_
+narberth
 narberth_bridge
 narborough
 nare_point
@@ -26219,14 +26219,14 @@ neasham
 neat_enstone
 neat_marsh
 neath
-neath_
+neath
 neath_abbey
 neath_canal
 neath_hill
 neatham
 neatishead
 neaton
-neave_
+neave
 neb
 nebo
 nebsworth
@@ -26327,7 +26327,7 @@ nether_wasdale
 nether_welton
 nether_westcote
 nether_whitacre
-nether_winchendon_
+nether_winchendon
 nether_worton
 nether_yeadon
 netheravon
@@ -26520,7 +26520,7 @@ new_parks
 new_passage
 new_pitsligo
 new_polzeath
-new_quay_
+new_quay
 new_rackheath
 new_radnor
 new_ridley
@@ -26594,11 +26594,11 @@ newbold_verdon
 newbold_on_stour
 newbolds
 newborough
-newborough_
+newborough
 newbottle
 newbourne
 newbridge
-newbridge_
+newbridge
 newbridge_green
 newbridge_on_usk
 newbridge_on_wye
@@ -26620,7 +26620,7 @@ newcastle_emlyn
 newcastle_under_lyme
 newcastle_upon_tyne
 newcastle_west
-newcastleton_
+newcastleton
 newcestown
 newchapel
 newchurch
@@ -26694,7 +26694,7 @@ newnham
 newnham_bridge
 newpool
 newport
-newport_
+newport
 newport_pagnell
 newport_on_tay
 newpound_common
@@ -26827,7 +26827,7 @@ nine_maidens_downs
 nine_oaks
 nine_wells
 ninebanks
-ninemile_bar_
+ninemile_bar
 ninemilehouse
 nineveh
 ninewells
@@ -26844,7 +26844,7 @@ nithbank
 nithside
 niton
 nitshill
-niwbwrch_
+niwbwrch
 no_mans_heath
 no_mans_land
 no_mans_heath
@@ -27215,12 +27215,12 @@ northleigh
 northlew
 northmoor
 northmoor_corner
-northmoor_green_
+northmoor_green
 northmostown
 northmuir
 northney
 northolt
-northop_
+northop
 northop_hall
 northorpe
 northover
@@ -27292,7 +27292,7 @@ nottage
 notter
 notting_hill
 nottingham
-nottingham_canal_
+nottingham_canal
 nottington
 notton
 noughaval
@@ -27588,7 +27588,7 @@ old_laxey
 old_leake
 old_lindley
 old_linslade
-old_llanberis_
+old_llanberis
 old_malden
 old_malton
 old_man_of_hoy
@@ -27833,7 +27833,7 @@ osmington
 osmington_mills
 osmondthorpe
 osmotherley
-osnaburgh_
+osnaburgh
 osney
 ospisdale
 ospringe
@@ -27847,7 +27847,7 @@ ostend
 osterley
 oswaldkirk
 oswaldtwistle
-oswestry_
+oswestry
 otby
 oteley
 otford
@@ -27972,7 +27972,7 @@ overstone
 overstrand
 overthorpe
 overton
-overton_
+overton
 overton_bridge
 overtown
 oving
@@ -27997,7 +27997,7 @@ owmby
 owmby_by_spital
 ownham
 owning
-owrtyn_
+owrtyn
 owslebury
 owston
 owston_ferry
@@ -28099,7 +28099,7 @@ painters_green
 painters_green
 painthorpe
 paintmoor
-pairc_
+pairc
 pairc_shiaboist
 paisley
 pakefield
@@ -28220,7 +28220,7 @@ pardshaw
 pardshaw_hall
 parham
 park
-park_
+park
 park_barn
 park_bernisdale
 park_bottom
@@ -28459,8 +28459,8 @@ pemberton
 pembles_cross
 pembrey
 pembridge
-pembroke_
-pembroke_dock_
+pembroke
+pembroke_dock
 pembroke_ferry
 pembury
 pempwell
@@ -28488,7 +28488,7 @@ pen_y_banc
 pen_y_bank
 pen_y_bont
 pen_y_bont
-pen_y_bont_ar_ogwr_
+pen_y_bont_ar_ogwr
 pen_y_bont_llanerch_emrys
 pen_y_bryn
 pen_y_bryn
@@ -28516,10 +28516,10 @@ pen_y_wern
 pen_yr_englyn
 pen_yr_heol
 penallt
-penally_
-penalum_
+penally
+penalum
 penare
-penarlag_
+penarlag
 penarron
 penarth
 penbeagle
@@ -28551,7 +28551,7 @@ pendeen
 pendeen_watch
 pendeford
 penderyn
-pendine_
+pendine
 pendle_water
 pendlebury
 pendleton
@@ -28565,7 +28565,7 @@ penegoes
 penelewey
 penenden_heath
 penffordd
-penfro_
+penfro
 pengam
 penge
 pengegon
@@ -28667,9 +28667,9 @@ penrhos
 penrhos_garnedd
 penrhosfeilw
 penrhyd_lastra
-penrhyn_bay_
+penrhyn_bay
 penrhyn_castle
-penrhyn_llyn_
+penrhyn_llyn
 penrhyn_mawr
 penrhyn_side
 penrhyn_coch
@@ -28765,7 +28765,7 @@ pentwyn
 pentwyn_berthlwyd
 pentwyn_mawr
 pentyrch
-pentywyn_
+pentywyn
 penwartha
 penwartha_coombe
 penweathers
@@ -28947,7 +28947,7 @@ picts_hill
 picton
 piddinghoe
 piddington
-piddle_
+piddle
 piddlehinton
 piddletrenthide
 pidley
@@ -29169,7 +29169,7 @@ pleasington
 pleasley
 pleasleyhill
 pleck
-pleck_
+pleck
 pleckgate
 pledgdon_green
 pledwick
@@ -29354,7 +29354,7 @@ pontamman
 pontantwn
 pontardawe
 pontardulais
-pontarfynach_
+pontarfynach
 pontarsais
 pontblyddyn
 pontbren_araeth
@@ -29399,9 +29399,9 @@ pontyglasier
 pontygwaith
 pontymister
 pontymoel
-pontypool_
+pontypool
 pontypridd
-pontypwl_
+pontypwl
 pontywaun
 pooksgreen
 pool
@@ -29454,7 +29454,7 @@ port_bridge
 port_carlisle
 port_charlotte
 port_clarence
-port_dinorwig_
+port_dinorwig
 port_dundas
 port_e_vullen
 port_edgar
@@ -29514,11 +29514,11 @@ porth
 porth_colmon
 porth_kea
 porth_navas
-porth_tywyn_
+porth_tywyn
 porth_llwyd
 porth_y_felin
 porth_y_waen
-porthaethwy_
+porthaethwy
 porthallow
 porthcawl
 porthcothan
@@ -29531,7 +29531,7 @@ porthill
 porthilly
 porthkerry
 porthleven
-porthllechog_
+porthllechog
 porthloo
 porthmadog
 porthmeor
@@ -29732,7 +29732,7 @@ press
 pressen
 prestatyn
 prestbury
-presteigne_
+presteigne
 presthope
 prestleigh
 prestolee
@@ -29946,9 +29946,9 @@ pyle_hill
 pylehill
 pyleigh
 pylle
-pymoor_
+pymoor
 pymore
-pymore_
+pymore
 pype_hayes
 pyrford
 pyrford_green
@@ -30042,8 +30042,8 @@ quoditch
 quoich
 quoisley
 quoit
-quorn_
-quorndon_
+quorn
+quorndon
 quothquan
 quoyloo
 quoyness
@@ -30560,7 +30560,7 @@ rhaeadr_fawr
 rhandir
 rhandirmwyn
 rhayader
-rhee_
+rhee
 rhencullen
 rhenetra
 rhes_y_cae
@@ -30580,7 +30580,7 @@ rhiroy
 rhitongue
 rhives
 rhiw
-rhiwabon_
+rhiwabon
 rhiwbebyll
 rhiwbina
 rhiwbryfdir
@@ -30596,7 +30596,7 @@ rhodes
 rhodes_minnis
 rhodesia
 rhondda
-rhonehouse_
+rhonehouse
 rhoose
 rhos
 rhos_common
@@ -30651,7 +30651,7 @@ rhuddall_heath
 rhuddlan
 rhue
 rhum
-rhuthun_
+rhuthun
 rhuvoult
 rhyd
 rhyd_ddu
@@ -30669,7 +30669,7 @@ rhyd_y_meirch
 rhyd_y_meudwy
 rhyd_y_sarn
 rhyd_yr_onnen
-rhydaman_
+rhydaman
 rhydargaeau
 rhydcymerau
 rhydd
@@ -30691,8 +30691,8 @@ rhydymwyn
 rhydywrach
 rhyl
 rhymney
-rhymney_
-rhymni_
+rhymney
+rhymni
 rhyn
 rhynd
 rhynie
@@ -30854,10 +30854,10 @@ rivenhall
 rivenhall_end
 river
 river_bank
-river_creed_
-river_crimple_
+river_creed
+river_crimple
 river_dun_navigation
-river_nell_
+river_nell
 riverchapel
 riverhead
 rivers_corner
@@ -31159,7 +31159,7 @@ rosscor
 rosses_point
 rossett
 rossett_green
-rossie_island_
+rossie_island
 rossington
 rossinver
 rossinver_po
@@ -31332,7 +31332,7 @@ royds_green
 royston
 royston_water
 royton
-ruabon_
+ruabon
 ruaig
 ruan
 ruan_high_lanes
@@ -31360,7 +31360,7 @@ rubha_na_traille
 rubha_nam_meirleach
 rubha_nan_crann
 rubha_nan_leacon
-rubha_robhanais_
+rubha_robhanais
 rubha_shamhnan_insir
 ruchazie
 ruchill
@@ -31494,7 +31494,7 @@ ruthall
 rutherglen
 ruthernbridge
 ruthin
-ruthin_
+ruthin
 ruthrieston
 ruthven
 ruthven_water
@@ -31916,7 +31916,7 @@ scarvister
 scarwell
 scatness
 scatsta
-scaur_
+scaur
 scaur_water
 scawby
 scawsby
@@ -32443,7 +32443,7 @@ shepherds_green
 shepherds_hill
 shepherds_patch
 shepherds_port
-shepherdswell_
+shepherdswell
 shepley
 shepperdine
 shepperton
@@ -32689,7 +32689,7 @@ shronowen
 shropham
 shropshire_canal,_middlewich_branch
 shropshire_union_canal
-shroton_
+shroton
 shrough
 shrub_end
 shrubs_hill
@@ -32729,7 +32729,7 @@ siadar_uarach
 sibbaldbie
 sibbertoft
 sibdon_carwood
-sibertswold_
+sibertswold
 sibford_ferris
 sibford_gower
 sible_hedingham
@@ -33271,7 +33271,7 @@ sots_hole
 sotterley
 soudley
 soughley
-soughton_
+soughton
 soulbury
 soulby
 souldern
@@ -33303,7 +33303,7 @@ south_ballachulish
 south_bank
 south_barrow
 south_beach
-south_beach_
+south_beach
 south_beddington
 south_benfleet
 south_bents
@@ -33768,9 +33768,9 @@ st_abbs
 st_aethans
 st_agnes
 st_agnes_head
-st_albans_head_
+st_albans_head
 st_albans
-st_aldhelms_
+st_aldhelms
 st_allen
 st_andrews_well
 st_andrews_wood
@@ -33785,7 +33785,7 @@ st_anthony
 st_anthonys
 st_anthony_in_meneage
 st_arvans
-st_asaph_
+st_asaph
 st_athan
 st_austell
 st_austins
@@ -33822,7 +33822,7 @@ st_cross
 st_cross_south_elmham
 st_cyrus
 st_davids
-st_davids_
+st_davids
 st_davids_head
 st_day
 st_decumans
@@ -33905,7 +33905,7 @@ st_keverne
 st_kew
 st_kew_highway
 st_keyne
-st_kilda_
+st_kilda
 st_lawrence
 st_leonards_street
 st_leonards
@@ -34003,7 +34003,7 @@ stack_of_wirrgeo
 stackallan
 stackhouse
 stackpole
-stackpole_elidor_
+stackpole_elidor
 stackpole_head
 stacksford
 stacksteads
@@ -34317,7 +34317,7 @@ stenswall
 stenton
 stentwood
 stenwith
-steornabhagh_
+steornabhagh
 stepaside
 stepney
 stepping_hill
@@ -34621,7 +34621,7 @@ storiths
 stormont
 stormontfield
 stormore
-stornoway_
+stornoway
 storridge
 storrington
 storrs
@@ -35099,7 +35099,7 @@ swannington
 swanpool
 swanscombe
 swansea
-swansea_
+swansea
 swansea_canal
 swanside
 swanston
@@ -35203,7 +35203,7 @@ swyddffynnon
 swynnerton
 swyre
 sycamore
-sychdyn_
+sychdyn
 sydallt
 syde
 sydenham
@@ -35277,7 +35277,7 @@ tai_nant
 taibach
 tail_burn
 tain
-tairbeart_
+tairbeart
 tairgwaith
 takeley
 takeley_street
@@ -35411,7 +35411,7 @@ taransay
 taransay_glorigs
 tarbat_ness
 tarbert
-tarbert_
+tarbert
 tarbet
 tarbock_green
 tarbolton
@@ -35588,7 +35588,7 @@ ten_acres
 ten_mile_bank
 tenandry
 tenbury_wells
-tenby_
+tenby
 tencreek
 tendring
 tendring_green
@@ -36736,7 +36736,7 @@ tralee
 traligill
 trallong
 trallwn
-trallwng_
+trallwng
 tram_inn
 tramagenna
 tramore
@@ -36831,7 +36831,7 @@ tredworth
 treen
 treesmill
 treeton
-tref_y_clawdd_
+tref_y_clawdd
 trefaes
 trefanny_hill
 trefasser
@@ -36843,7 +36843,7 @@ trefeitha
 trefenter
 treffgarne
 treffynnon
-treffynnon_
+treffynnon
 trefgarn_owen
 trefil
 trefilan
@@ -36858,7 +36858,7 @@ treforest
 treforgan
 trefriw
 trefrize
-trefynwy_
+trefynwy
 tregada
 tregadgwith
 tregadillett
@@ -36981,7 +36981,7 @@ trenithon
 trenoon
 trenoweth
 trent
-trent_
+trent
 trent_and_mersey_canal
 trent_vale
 trentham
@@ -36989,8 +36989,8 @@ trentishoe
 trentlock
 trenwheal
 treoes
-treorchy_
-treorci_
+treorchy
+treorci
 treowen
 trequite
 trerhyngyll
@@ -37471,7 +37471,7 @@ tycroes
 tydd_gote
 tydd_st_giles
 tydd_st_mary
-tyddewi_
+tyddewi
 tyddyn
 tyddyn_angharad
 tyddyn_dai
@@ -37571,7 +37571,7 @@ uig
 uigen
 uigshader
 uinessan
-uisage_dubh_
+uisage_dubh
 uisg_a_chaime
 uisge_an_t_suidhe
 uisge_labhair
@@ -37826,7 +37826,7 @@ upper_lambourn
 upper_landywood
 upper_langford
 upper_langwith
-upper_largo_
+upper_largo
 upper_layham
 upper_leigh
 upper_littleton
@@ -38008,7 +38008,7 @@ urra
 urvaig
 ushaw_moor
 usk
-usk_
+usk
 usk_reservoir
 usselby
 usworth
@@ -38041,7 +38041,7 @@ vale,_the
 valentia_island
 valeswood
 vallay
-valley_
+valley
 valley_truckle
 valley,_the
 valleymount
@@ -38087,7 +38087,7 @@ ventry
 venus_hill
 ver
 veraby
-vermudens_drain_
+vermudens_drain
 vernatts_drain
 vernham_bank
 vernham_dean
@@ -38678,7 +38678,7 @@ wayford
 waymills
 wayne_green
 waytown
-wdig_
+wdig
 weacombe
 weald
 wealdstone
@@ -38808,7 +38808,7 @@ welsh_newton
 welsh_newton_common
 welsh_st_donats
 welshampton
-welshpool_
+welshpool
 welshwood_park
 welstor
 welton
@@ -38972,7 +38972,7 @@ west_ealing
 west_edge
 west_ella
 west_end
-west_end_
+west_end
 west_end_green
 west_ewell
 west_farleigh
@@ -39279,7 +39279,7 @@ western_cleddau
 western_downs
 western_heights
 western_hill
-western_isles_
+western_isles
 western_park
 westerton
 westerton_of_runavey
@@ -39608,8 +39608,8 @@ white_ox_mead
 white_pit
 white_post
 white_rocks
-white_roding_
-white_roothing_
+white_roding
+white_roothing
 white_stake
 white_stone
 white_waltham
@@ -39706,7 +39706,7 @@ whitfield
 whitfield_court
 whitfield_hall
 whitford
-whitford_
+whitford
 whitgift
 whitgreave
 whithaugh
@@ -40511,7 +40511,7 @@ wooler
 wooler_water
 woolfall_heath
 woolfardisworthy
-woolfardisworthy_
+woolfardisworthy
 woolfold
 woolfords_water
 woolfords_cottages
@@ -40540,7 +40540,7 @@ woolpit_heath
 woolridge
 woolsbridge
 woolscott
-woolsery_
+woolsery
 woolsgrove
 woolsington
 woolstanwood
@@ -40688,7 +40688,7 @@ wreath
 wreaths
 wreay
 wrecclesham
-wrecsam_
+wrecsam
 wrekenton
 wrelton
 wrenbury
@@ -40699,7 +40699,7 @@ wrentnall
 wressle
 wrestlingworth
 wretton
-wrexham_
+wrexham
 wrexham_street
 wreyland
 wribbenhall
@@ -40792,11 +40792,11 @@ wyverstone
 wyverstone_green
 wyverstone_street
 wyville
-y_bont_faen_
-y_felinheli_
-y_fenni_
+y_bont_faen
+y_felinheli
+y_fenni
 y_ferwig
-y_fflint_
+y_fflint
 y_ffor
 y_gelli_gandryll
 y_gribyn
@@ -40954,8 +40954,8 @@ youngs_end
 youngsbury
 yoxall
 yoxford
-yr_hob_
-yr_wyddgrug_
+yr_hob
+yr_wyddgrug
 ysbyty_cynfyn
 ysbyty_ifan
 ysbyty_ystwyth
