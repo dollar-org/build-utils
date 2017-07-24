@@ -133,6 +133,8 @@ echo ${RELEASE} > .release
 git add .release
 echo ${RELEASE} ${RELEASE_NUMBER} ${RELEASE_ID} ${CODENAME}  > .release.details
 git add .release.details
+github_changelog_generator --token=${GITHUB_TOKEN}
+git add CHANGELOG.md
 git commit -m "Release ${RELEASE} (${CODENAME})" || :
 git tag ${TAG} || :
 git push --tags
