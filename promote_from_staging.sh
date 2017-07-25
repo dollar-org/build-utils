@@ -126,7 +126,7 @@ git merge ${CI_BRANCH} -m "Merge from ${CI_BRANCH} for ${RELEASE}"
 #git push --set-upstream origin master
 if [[ -f README.tmpl.md  ]]
 then
-    envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${DOWNLOAD}' < README.tmpl.md > README.staged.md
+    envsubst '${RELEASE}:${BLURB}:${FOOTER}:${HEADER}:${STATE_SHELVED}:${STATE_EXPERIMENTAL}:${STATE_ACTIVE}:${STATE_PRE_ALPHA}:${STATE_ALPHA}:${STATE_BETA}:${STATE_PROD}:${DOWNLOAD}:${MAJOR_VERSION}:${NEXT_MAJOR_VERSION}' < README.tmpl.md > README.staged.md
     git add README.staged.md
 fi
 echo ${RELEASE} > .release
