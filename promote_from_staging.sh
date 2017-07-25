@@ -133,7 +133,7 @@ echo ${RELEASE} > .release
 git add .release
 echo ${RELEASE} ${RELEASE_NUMBER} ${RELEASE_ID} ${CODENAME}  > .release.details
 git add .release.details
-github_changelog_generator --token=${GITHUB_CHANGELOG_TOKEN}
+github_changelog_generator --user ${CI_PROJECT_USERNAME} --project ${CI_PROJECT_REPONAME} --token=${GITHUB_CHANGELOG_TOKEN} --release-branch master --future-release ${NEXT_MAJOR_VERSION}
 git add CHANGELOG.md
 git commit -m "Release ${RELEASE} (${CODENAME})" || :
 git tag ${TAG} || :
