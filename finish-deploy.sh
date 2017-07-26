@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -eux
 cp README.staged.md README.md
 git add README.md
 git config --global user.email "hello@neilellis.me"
