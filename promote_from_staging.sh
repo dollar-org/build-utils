@@ -58,7 +58,7 @@ export BLURB=$(
 cat <<EOF
 -------
 
-** If you use this project please consider giving us a star on [GitHub](http://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME). **
+**If you use this project please consider giving us a star on [GitHub](http://github.com/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME).**
 
 Please contact me through Gitter (chat) or through GitHub Issues.
 
