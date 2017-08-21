@@ -122,7 +122,7 @@ git branch --set-upstream-to=origin/${CI_BRANCH} ${CI_BRANCH}
 git checkout ${CI_BRANCH}
 git rebase master
 git checkout master
-git merge ${CI_BRANCH} -m "Merge from ${CI_BRANCH} for ${RELEASE}"
+git merge ${CI_BRANCH} -m "🤝 Merge from ${CI_BRANCH} for ${RELEASE}"
 #git push --set-upstream origin master
 if [[ -f README.tmpl.md  ]]
 then
@@ -133,7 +133,7 @@ echo ${RELEASE} > .release
 git add .release
 echo ${RELEASE} ${RELEASE_NUMBER} ${RELEASE_ID} ${CODENAME}  > .release.details
 git add .release.details
-git commit -m "Release ${RELEASE} (${CODENAME})" || :
+git commit -m "👍 Release ${RELEASE} (${CODENAME})" || :
 git tag ${RELEASE} || :
 git push --tags
 git push origin master
