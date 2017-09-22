@@ -15,5 +15,3 @@ adjsLength=$(wc -l < ./$dict/middle.txt)
 lastLength=$(wc -l < ./$dict/last.txt)
 
 echo $(sed -n $((part1Dec % (firstLength - 1)))p ./$dict/first.txt)-$(sed -n $((part2Dec % (adjsLength -1 )))p ./$dict/middle.txt)-$(sed -n $((part3Dec % (lastLength - 1)))p ./$dict/last.txt) | tr -cd '[:print:]'
-
-
